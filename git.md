@@ -25,6 +25,7 @@ Crée un nouveau repo local avec le nom spécifié
 Télécharge un projet et son historique de version
 
 Ajout de fichiers et commit
+---
 
 <code>git status</code><br>
 Répertorie tous les nouveaux fichiers ou modifiés à être validés
