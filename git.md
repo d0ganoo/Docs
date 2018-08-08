@@ -4,149 +4,138 @@
 
 Configuration
 ---
-Configure user information for all local repositories
+Configurer les informations utilisateur pour tous les repos locaux
 
 <code>git config --global user.name "[name]"</code><br>
-Sets the name you want attached to your commit transactions
+Définit le nom que vous souhaitez attacher à vos commits
 
 <code>git config --global user.email "[email address]"</code><br>
 
 <code>git config --global color.ui auto</code><br>
-Enables helpful colorization of command line output
+Permet une coloration des lignes de commandes en sortie
 
-Create repositories
+Créer des répertoires
 ---
-Start a new repository or obtain one from an existing URL
+Démarrer un nouveau repo ou en obtenir un à partir d'une URL existante
 
 <code>git init [project-name]</code><br>
-Creates a new local repository with the specified name
+Crée un nouveau repo local avec le nom spécifié
 
 <code>git clone [url]</code><br>
-Downloads a project and its entire version history
+Télécharge un projet et son historique de version
 
-Add files and commit
----
-Review edits and craft a commit transaction
+Ajout de fichiers et commit
 
 <code>git status</code><br>
-Lists all new or modified files to be committed
+Répertorie tous les nouveaux fichiers ou modifiés à être validés
 
 <code>git diff</code><br>
-Shows file differences not yet staged
+Affiche les différences entre les fichiers qui n'ont pas encore été stage (avant git add .) et les fichiers du dernier commit
 
 <code>git add [file]</code><br>
-Snapshots the file in preparation for versioning
+Mise en zone de staging. Prepare les fichiers pour le versionning
 
 <code>git diff --staged</code><br>
-Shows file differences between staging and the last file version
+Affiche les différences entre les fichiers dans la zone de staging et les fichiers du dernier commit
 
 <code>git reset [file]</code><br>
-Unstages the file, but preserve its contents
+Enlève le fichier de la zone de staging en gardant les modifications apportées au fichier
 
 <code>git commit -m "[descriptive message]"</code><br>
-Records file snapshots permanently in version history
+Enregistre les fichiers de la zone de staging dans l'historique de versionning
 
 Branches
 ---
-Name a series of commits and combine completed efforts
-Sets the email you want attached to your commit transactions
 
 <code>git branch</code><br>
-Lists all local branches in the current repository
+Liste toutes les branches locales du repo courant
 
 <code>git branch [branch-name]</code><br>
-Creates a new branch
+Crée une nouvelle branche
 
 <code>git checkout [branch-name]</code><br>
-Switches to the specified branch and updates the working directory
+Se déplacer sur une branch
+
+<code>git checkout -b [branch-name]</code><br>
+Crée la branche et se positionne dessus
 
 <code>git merge [branch]</code><br>
-Combines the specified branch’s history into the current branch
+Combine l'historique de la branche spécifiée dans la branche courante
 
 <code>git branch -d [branch-name]</code><br>
-Deletes the specified branch
+Supprimer une branche
 
-Refactor files
+Déplacer et supprimer des fichiers versionnés
 ---
-Relocate and remove versioned files
 
 <code>git rm [file]</code><br>
-Deletes the file from the working directory and stages the deletion
-
-<code>git rm --cached [file]</code><br>
-Removes the file from version control but preserves the file locally
+Supprime le fichier du répertoire de travail et envoye dans la zone de staging le fichier supprimer
 
 <code>git mv [file-original] [file-renamed]</code><br>
-Changes the file name and prepares it for commit
+Modifie le nom du fichier et le prépare pour le commit (zone de staging)
 
-See history
----
-Browse and inspect the evolution of project files
+Voir l'historique
+----
 
 <code>git log</code><br>
-Lists version history for the current branch
+Liste l'historique des versions de la branche courante
 
 <code>git log --follow [file]</code><br>
-Lists version history for a file, including renames
+Liste l'historique de version pour un fichier spécifique, y compris les fichiers renommés
 
 <code>git diff [first-branch]...[second-branch]</code><br>
-Shows content differences between two branches
+Affiche les différences de contenu entre deux branches
 
 <code>git show [commit]</code><br>
-Outputs metadata and content changes of the specified commit
+Affiche les métadonnées et les changements de contenu pour le commit spécifié
 
-Ignore files
+Ignorer les fichiers
 ---
-Exclude temporary files and paths
+Exclure les fichiers temporaires et les chemins d'accès
 ```
 *.log
 build/
 temp-*
 ```
-A text file named .gitignore suppresses accidental versioning of
-files and paths matching the specified patterns
+Un fichier nommé .gitignore permet d'ignorer certains fichiers/dossiers de l'historique de versions
 
 <code>git ls-files --other --ignored --exclude-standard</code><br>
-Lists all ignored files in this project
+Liste tous les fichiers ignorés dans ce projet
 
-Redo commits
+Rétablir un commit
 ---
-Erase mistakes and craft replacement history
 
 <code>git reset [commit]</code><br>
-Undoes all commits after [commit] , preserving changes locally
+Défait tous les commits après le commit spécifié et garde les modifications localement
 
 <code>git reset --hard [commit]</code><br>
-Discards all history and changes back to the specified commit
+Défait tous les commits après le commit spécifié et et supprime le modification locale.
+Permet de revenir à la version du code au moment du commit spécifié
 
-Stash changes
+Stash
 ---
-Shelve and restore incomplete changes
+Mettre de côté ou restaurer des modifications incomplètes
 
 <code>git stash</code><br>
-Temporarily stores all modified tracked files
+Stocke temporairement tous les fichiers modifiés mais pas encore en zone de staging
 
 <code>git stash pop</code><br>
-Restores the most recently stashed files
+Restaure les fichiers qui ont été stash
 
 <code>git stash list</code><br>
-Lists all stashed changesets
+Liste tous les fichiers en zone de stash
 
-<code>git stash drop</code><br>
-Discards the most recently stashed changeset
-
-Synchronize changes
+Synchroniser les modifications
 ---
-Register a repository bookmark and exchange version history
 
 <code>git fetch [bookmark]</code><br>
-Downloads all history from the repository bookmark
+Télécharge tout l'historique du repo bookmark
 
-<code>git merge [bookmark]/[branch]</code><br>
-Combines bookmark’s branch into current local branch
+<code>git merge [bookmark]</code><br>
+Fusionne la branche bookmark avec la branche courante (Se positionner sur la branche sur laquelle on veut faire la fusion)
 
 <code>git push [alias] [branch]</code><br>
-Uploads all local branch commits to GitHub
+Upload tous les commits 
 
 <code>git pull</code><br>
-Downloads bookmark history and incorporates changes
+Télécharge tous les commits
