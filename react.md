@@ -20,8 +20,6 @@ const name = 'Josh Perez';
 const element = &lt;h1&gt;Hello, {name}&lt;/h1&gt;;
 ```
 
-Babel transforme le JSX en expression React.
-
 Les éléments
 ---
 
@@ -110,8 +108,8 @@ L'idée étant de pouvoir continuer d'utiliser l'application là où les composa
 </ErrorBoundary>
 
 ```
-(Une erreur est attendu dans le cas du premier input)
-Le premier ne fonctionnera pas et affichera un message d'erreur à l'utilisateur tandis que le deuxième fonctionnera et d'affichera parfaitement.
+(Une erreur est attendue dans le cas du premier input)
+Le premier ne fonctionnera pas et affichera un message d'erreur à l'utilisateur tandis que le deuxième fonctionnera et s'affichera parfaitement.
 
 Prop
 ---
