@@ -8,7 +8,7 @@ Le JSX
 
 JSX (une extension syntaxique de JS) est recommendé pour React. Exemple de JSX :  
 ```Javascript
-const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;
+const element = <h1>Hello, world!</h1>;
 ```
 
 
@@ -17,7 +17,7 @@ Au lieu de séparer les balises (le HTML) et l’algorithmique, React réuni les
 En JSX on peut uttiliser entre accolades toute expression JS valide.  
 ```Javascript
 const name = 'Josh Perez';  
-const element = &lt;h1&gt;Hello, {name}&lt;/h1&gt;;
+const element = <h1>Hello, {name}</h1>;
 ```
 
 Les éléments
@@ -33,17 +33,17 @@ Les components
 Les components sont des fonctions JS qui acceptent un seul paramètre (les “props”) et qui renvoie un élément React.  
 ```Javascript
 function Welcome(props) {  
-  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;  
+  return <h1>Hello, {props.name}</h1>;  
 }
 ```
 
 On peut afficher le rendu d’un component avec JSX.  
 ```Javascript
 function Welcome(props) {  
-  return &lt;h1&gt;Hello, {props.name}&lt;/h1&gt;;  
+  return <h1>Hello, {props.name}</h1>;  
 }
 
-const element = &lt;Welcome name="Sara" /&gt;;  
+const element = <Welcome name="Sara" />;  
 ReactDOM.render(  
   element,  
   document.getElementById('root')  
