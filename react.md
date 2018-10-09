@@ -76,3 +76,43 @@ this.setState({comment: 'Hello'}); // Correct
 “props” et “state” peuvent être mis à jour de façon asynchrone, donc on ne peut pas se baser sur leur valeur pour calculer le nouveau “state”. Une solution : “setState” accepte une fonction en argument, qui prend en paramètre l’ancien state ainsi que le props au moment de l’exécution.
 
 Le flux de données est unidirectionnel : un component parent peut passer des données vers ses enfants, mais pas l’inverse.
+
+Error Bundaries
+---
+
+Le concept du composant Error boundaries est de permettre d'intercepter les erreurs des composants qu'ils encapuslent.
+L'idée étant de pouvoir continuer d'utiliser l'application là où les composants fonctionnent encore, tout en informant l'utilisateur qu'il y a un problème sur l'un ou certains d'entre eux.
+
+``` Javascript
+
+<ErrorBoundary>
+ <MyInput
+ name="email"
+ validations="isEmail"
+ label="Adresse E-Mail"
+ placeholder="E-Mail"
+ validationError="Adresse E-Mail non valide"
+ required
+ error={true}
+ />
+</ErrorBoundary>
+
+<ErrorBoundary>
+ <MyInput
+ name="password"
+ label="Mot de passe"
+ placeholder="Mot de passe"
+ validationError="Field empty"
+ required
+ type="password"
+ error={false}
+ />
+</ErrorBoundary>
+
+```
+(Une erreur est attendu dans le cas du premier input)
+Le premier ne fonctionnera pas et affichera un message d'erreur à l'utilisateur tandis que le deuxième fonctionnera et d'affichera parfaitement.
+
+Prop
+---
+
