@@ -126,6 +126,27 @@ L'idée étant de pouvoir continuer d'utiliser l'application là où les composa
 (Une erreur est attendue dans le cas du premier input)
 Le premier ne fonctionnera pas et affichera un message d'erreur à l'utilisateur tandis que le deuxième fonctionnera et s'affichera parfaitement.
 
-Prop
+PropTypes
 ---
+
+PropTypes exporte des validateurs pouvant être utilisés pour vérifier que les données reçues sont valides. Dans cet exemple, nous utilisons PropTypes.string. Lorsqu'une valeur non valide est fournie pour un component, un avertissement apparaît dans la console JavaScript. 
+
+Pour des raisons de performances, propTypes est uniquement vérifié en mode développement.
+
+``` Javascript
+import PropTypes from 'prop-types';
+
+class Greeting extends React.Component {
+  render() {
+    return (
+      <h1>Hello, {this.props.name}</h1>
+    );
+  }
+}
+
+Greeting.propTypes = {
+  name: PropTypes.string
+};
+
+```
 
