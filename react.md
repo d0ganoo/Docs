@@ -6,6 +6,18 @@
 
 Au départ, React.js a été développé par Facebook pour ses propres besoins : avoir une interface utilisateur (UI) à la fois dynamique et performante. Depuis il a connu une très grande popularité notamment dans de nombreuses start-up. En 2011, Jordan Walke (également créateur de Reason) et son équipe issue de Facebook développent le projet React JS : une bibliothèque JavaScript qui propose une nouvelle façon de générer les pages web, en rendant plus naturelles et plus fluides les interactions utilisateur.
 
+### Les avantages
+
+- DOM (document object model) est un compromis des vus sur les entrées et sorties de données. Le DOM virtuel de React est plus rapide que le modèle de rafraîchissement complet conventionnel, puisque le DOM virtuel ne rafraîchit que certaines parties de la page. Ce qui est intéressant, c’est que l’équipe de Facebook n’était pas consciente qu’une actualisation partielle d’une page se révélerait plus rapide. Facebook cherchait juste un moyen de réduire leur temps de reconstruction, et le rafraîchissement partiel du DOM était juste une bonne solution. Au final, cela augmente les performances et accélère la programmation.
+
+- Vous pouvez réutiliser des composants de code dans React JS, ce qui vous fait gagner beaucoup de temps.
+
+- Il améliore la vitesse de débogage, facilitant ainsi la vie de votre développeur.
+
+- Couplé avec NextJS par exemple, il améliorera le référencement de votre application web.
+
+- Code lisible, concepts utilisé dans d'autre framework comme VUE js
+
 Le JSX
 ---
 
