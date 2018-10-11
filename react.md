@@ -130,7 +130,7 @@ PropTypes
 ---
 
 PropTypes exporte des validateurs pouvant être utilisés pour vérifier que les données reçues sont valides. Dans cet exemple, nous utilisons PropTypes.string. Lorsqu'une valeur non valide est fournie pour un component, un avertissement apparaît dans la console JavaScript. 
-
+Cette vérification du typage est effectuée au runtime.
 Pour des raisons de performances, propTypes est uniquement vérifié en mode développement.
 
 ``` Javascript
