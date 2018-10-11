@@ -39,6 +39,9 @@ Mise en zone de staging. Prepare les fichiers pour le versionning
 <code>git diff --staged</code><br>
 Affiche les différences entre les fichiers dans la zone de staging et les fichiers du dernier commit
 
+<code>git diff-tree --no-commit-id --name-only -r <commit></code><br>
+Lister tous les fichiers concernés par un commit
+
 <code>git reset [file]</code><br>
 Enlève le fichier de la zone de staging en gardant les modifications apportées au fichier
 
@@ -53,6 +56,9 @@ Liste toutes les branches locales du repo courant
 
 <code>git branch [branch-name]</code><br>
 Crée une nouvelle branche
+
+<code>git branch --contains <commit></code><br>
+Lister les branches qui contiennent un commit en particulier
 
 <code>git checkout [branch-name]</code><br>
 Se déplacer sur une branch
@@ -84,6 +90,9 @@ Liste l'historique des versions de la branche courante
 <code>git log --follow [file]</code><br>
 Liste l'historique de version pour un fichier spécifique, y compris les fichiers renommés
 
+<code>git log master..[branch-name]</code><br>
+Liste uniquement les commit de [branch-name] même si on merge master sur [branch-name]
+
 <code>git diff [first-branch]...[second-branch]</code><br>
 Affiche les différences de contenu entre deux branches
 
@@ -112,6 +121,9 @@ Défait tous les commits après le commit spécifié et garde les modifications 
 <code>git reset --hard [commit]</code><br>
 Défait tous les commits après le commit spécifié et et supprime le modification locale.
 Permet de revenir à la version du code au moment du commit spécifié
+
+<code>git reflog</code><br>
+Revenir sur certaines commandes trop impulsives (comme un reset ou un rebase)
 
 Stash
 ---
