@@ -4,3 +4,11 @@
 * * * 
 
 # Test Js
+
+Il existe tois niveaux de test:
+
+Les tests unitaires
+
+Les tests d'intégrations
+
+Les tests fonctionnels 
