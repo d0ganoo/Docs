@@ -5,7 +5,7 @@
 
 # Test Js
 
-Il existe tois niveaux de test:
+Il existe trois niveaux de test:
 
 Les tests unitaires
 
