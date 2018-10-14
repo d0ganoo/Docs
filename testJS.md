@@ -7,8 +7,16 @@
 
 Il existe trois niveaux de test:
 
-Les tests unitaires
+Les tests unitaires:
+
+Permet de tester une unité de code. Principalement une méthode ou function 
 
 Les tests d'intégrations
 
+Permet de tester le comportement de plusieurs components mais ensemble. Pour savoir s'ils intéragissent bien l'un avec l'autre
+
 Les tests fonctionnels 
+
+Permet de tester le produit final.
+
+Navigateur, driver pour piloter de manière automatiser ce navigateur et un langague pour communiquer avec le driver
