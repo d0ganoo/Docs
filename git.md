@@ -2,8 +2,6 @@
 
 * * * 
 
-* * * 
-
 Configuration
 ---
 Configurer les informations utilisateur pour tous les repos locaux
