@@ -8,3 +8,8 @@ Jest est intégré de base avec les applications générées par Create React Ap
 
 Par défaut, Jest cherche dans tous les sous-dossiers (à part  node_modules  et  .git  , notamment) à la recherche de fichiers se terminant par  spec.js  ou  test.js  , précédé d’un trait d’union (  -  ) ou d’un point (  .  ).
 Create React App étend les extensions examinées (il ajoute  .mjs  et  .jsx  ), limite la recherche au contenu du dossier  src/  et opte dans ses fichiers générés pour le suffixe  .test.js
+
+Jest fournit de base une fonction  expect()  qui propose toute une série d’assertions (ce qu’ils appellent des matchers), telles que  .toEqual()  ,  .toContain()  ou  .toHaveBeenCalled()  , pour n’en citer que trois.
+
+Pour connaître toutes les assertions disponibles : 
+https://jestjs.io/docs/en/expect.html#content
