@@ -2,7 +2,7 @@
 
 ***
 
-# Jest
+# Jest | Enzyme
 
 Jest est intégré de base avec les applications générées par Create React App. Si on regarde le fichier  package.json  à la racine du projet, on voit qu’il propose un script  test  dont la commande est  react-scripts test --env=jsdom  , lequel utilise Jest en interne.
 
@@ -13,3 +13,7 @@ Jest fournit de base une fonction  expect()  qui propose toute une série d’as
 
 Pour connaître toutes les assertions disponibles : 
 https://jestjs.io/docs/en/expect.html#content
+
+Jest: Permet de tester des fonctions standards
+
+Enzyme: Permet de tester le rendu des composants react
