@@ -175,7 +175,7 @@ render(
 
 ```
 
-#### Router variable en paramètre, component statefull mais perte de la fonctionnalité pour récupérer les données via url
+#### Router avec variables en paramètre | Component statefull mais perte de la fonctionnalité pour récupérer les données via url (<Route path={`${match.path}/:topicId`})
 
 ```Javascript
 
@@ -229,7 +229,8 @@ class Topics extends Component {
             <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
           </li>
         </ul>
-          <Route path={`${match.path}/:topicId`}  render={() => <Topic {...this.props} extra={`${prenom} ${nom}`}  state={this.state.profils}/>} />
+          <Route path={`${match.path}/:topicId`}  
+            render={() => <Topic {...this.props} extra={`${prenom} ${nom}`}  state={this.state.profils}/>} />
           <Route
             exact
             path={match.path}
