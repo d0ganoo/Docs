@@ -206,6 +206,7 @@ Cette approche automatique contraste avec les langages bas niveau comme le C, o�
 ## Utilisation des web socket  
   
 Elle permet d’ouvrir une connexion permanente entre le navigateur et le serveur. Ainsi, chaque requête est plus rapide, et plus légère.  
+Connection du serveur vers le navigateur.
 
 ## Notion de Progressive Web App  
  
