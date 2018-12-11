@@ -8,11 +8,11 @@
 
 Structure d'un projet Redux:
 
-*Src
-**actions
-**components
-**containers
-**reducers
+* Src
+** actions
+** components
+** containers
+** reducers
 index.js
 
 Redux permet d'avoir un gros objet State qui va contenir toutes les données de l'application. C'est le Store de redux.
