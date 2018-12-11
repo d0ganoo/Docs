@@ -40,7 +40,7 @@ export default function(state,action){
   return state;
 }
 
-``
+```
 
 ### Connecter reduc à react
 
