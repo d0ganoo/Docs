@@ -10,11 +10,11 @@ Structure d'un projet Redux:
 
 ```Bash
 
-* Src
-** actions
-** components
-** containers
-** reducers
+|-- Src
+  |-- actions
+  |-- components
+  |-- containers 
+  |-- reducers
 index.js
 
 ```
