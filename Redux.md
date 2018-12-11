@@ -21,6 +21,29 @@ index.js
 
 Redux permet d'avoir un gros objet State qui va contenir toutes les données de l'application. C'est le Store de redux.
 
+### index.js
+
+```Javascript
+
+import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore, applyMiddleware} from 'redux';
+
+import App from './components/app';
+import reducers from './reducers';
+
+const createStoreWithMiddleware = applyMiddleware()(createStore); // Crée le store de redux
+
+ReactDom.render(
+  <Provider store={createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX__DEVTOOLS_EXTENSION__())}>
+    <App />
+  </Provider>
+)
+
+// Connect le store de redux aux reducers et permet l'accès au Redux devtools
+
+```
+
 ### Les reducers
 
 Un reducer est une fonction qui retourne un objet. Il permet de mettre à jour le Store de redux.
