@@ -6,6 +6,8 @@
 
 # Redux
 
+Redux ne permet pas les requêtes asynchrones => redux-thunk répond a cette problématique
+
 Structure d'un projet Redux:
 
 ```Bash
