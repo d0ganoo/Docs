@@ -50,4 +50,21 @@ export default connect(mapStateToProps)(nom_Component);
 ```
 Le reducer retourne le state et mapStateToProps la transmet aux props de react. C'est connect qui définit mapStateToProps comme pont en react et redux.
 
+### Les actions
 
+Les actions permettent de déclencher le reducer attendu.
+L'écriture de l'action se fait dans le dossier action 
+
+## Faire le pont entre les actions et les reducers
+
+Code appartenant au container
+
+```Javascript
+import {bindActionCreators} from 'redux';
+
+function mapDispatchToProps(dispatch){
+  return bindActionCreators({selectUser:selectUser}, dispatch)
+}
+
+```
+Dispatch permet d'envoyer l'action à tous les reducers et bindActionCreators de les rendre accèssible dans les props pour react.
