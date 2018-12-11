@@ -7,7 +7,8 @@ Il permet de passer une fonction à la place d'une action et de dispatcher depui
 
 ```Javascript
 
-// Exemple d'action avec redux-thunk, au lieu de retourner une action, on retourne une fonction et on dispatch les actions
+// Exemple d'action avec redux-thunk, au lieu de retourner une action,
+// on retourne une fonction et on dispatch les actions
 
 import thunk from 'redux-thunk';
 
