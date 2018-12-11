@@ -2,10 +2,23 @@
 
 # Redux-thunk
 
-Redux ne permet pas les requêtes asynchrones => redux-thunk répond a cette problématique
+Redux ne permet pas les requêtes asynchrones => Le middleware redux-thunk répond a cette problématique
+Il permet de passer une fonction à la place d'une action et de dispatcher depuis cette fonction. 
 
 ```Javascript
 
+// Exemple d'action avec redux-thunk, au lieu de retourner une action, on retourne une fonction et on dispatch les actions
+
 import thunk from 'redux-thunk';
+
+export function getCountries(){
+  return function (dispatch){
+    axios("http://url_api").then(function(response){
+      dispatch({type:GET_COUNTRIES, payload: response.data.countries})
+    }).catch(function(error){
+      disptach({type:ERROR_GET_COUNTRiES, error:error.response.data.detail})
+    });
+  }
+}
 
 ```
