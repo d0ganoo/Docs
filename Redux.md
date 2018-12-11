@@ -31,6 +31,17 @@ Root reducer: CombineReducers(func) permet de lier les parties du store et leur 
 Les reducers ne sont jamais appelé directement dans notre application. Ils sont appelés par le biais d'un déclencheur qui va appelé tous les reducers qui sont présent dans le root reducer.
 Donc au lancement de l'application tous les reducers sont appelés.
 
+```Javascript
+
+export default function(state,action){
+  switch(action.type){
+    case USER_SELECTED: return action.payload; (continent le user, cf l'action)
+  }
+  return state;
+}
+
+``
+
 ### Connecter reduc à react
 
 La fonction connect fait le pont entre redex et react: import {connect} from 'react-redux';
@@ -53,7 +64,18 @@ Le reducer retourne le state et mapStateToProps la transmet aux props de react. 
 ### Les actions
 
 Les actions permettent de déclencher le reducer attendu.
-L'écriture de l'action se fait dans le dossier action 
+L'écriture de l'action se fait dans le dossier action
+
+```Javascript
+
+export function selectUser(user){
+  return {
+    type: USER_SELECTED,
+    payload: user
+  }
+}
+
+```
 
 ## Faire le pont entre les actions et les reducers
 
