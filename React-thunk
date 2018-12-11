@@ -4,8 +4,6 @@
 
 Redux ne permet pas les requêtes asynchrones => redux-thunk répond a cette problématique
 
-
-
-```Javacript
+```Javascript
 import thunk from 'redux-thunk';
 ```
