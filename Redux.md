@@ -35,7 +35,7 @@ Donc au lancement de l'application tous les reducers sont appelés.
 
 export default function(state,action){
   switch(action.type){
-    case USER_SELECTED: return action.payload; (continent le user, cf l'action)
+    case USER_SELECTED: return action.payload; (continent le user, cf l\'action)
   }
   return state;
 }
