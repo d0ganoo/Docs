@@ -111,9 +111,14 @@ Attention : il faut nommer les components avec une majuscule, car React traite l
 On peut appeler des components dans d’autre components.
 Règle de base en React : les props doivent être read-only.
 
-Comment faire pour savoir s'il faut utiliser un component de class ou de function ?
+1- Comment faire pour savoir s'il faut utiliser un component de class ou de function ?
 
 Si le composant nécessite un state ou un cycle de vie, utilisez le class component sinon utilisez un function component.
+
+2- Qu'est-ce qu'un composant pur ?
+
+React.PureComponent est exactement le même que React.Component, à la différence qu'il gère pour vous la méthode shouldComponentUpdate().
+Lorsque les props ou la state changent, le PureComponent effectue une comparaison entre les props et la state
 
 Les états et le cycle de vie
 ---
