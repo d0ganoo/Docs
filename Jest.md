@@ -18,12 +18,45 @@ Jest: Permet de tester des fonctions standards
 
 Enzyme: Permet de tester le rendu des composants react
 
+  ** SHALLOW RENDERING
+  
+  Le shallow rendering est utile pour vous contraindre à tester un composant en tant qu'unité et pour vous assurer que vos tests n'affichent pas indirectement le comportement des composants enfants.
+  
+  ```Javascript
+  import { shallow } from 'enzyme';
+  import Foo from './Foo';
+
+  describe('<MyComponent />', () => {
+    it('renders three <Foo /> components', () => {
+      const wrapper = shallow(<MyComponent />);
+      expect(wrapper.find(Foo)).to.have.lengthOf(3);
+    });
+  });
+  ```
+
+On shallow le component pour l'isoler de ses enfants, puis on peut effectuer des fonctions sur ce wrapper.
+Exemples : 
+
+**.find(selector)
+
+La fonction find permet de rechercher tous les noeuds de l'arbre de rendu correspondant au sélecteur fourni.
+
+**.findWhere(predicate)
+
+Permet de rechercher tous les nœuds de l’arbre qui renvoie true pour la fonction de prédicat fournie.
+
+**.filter(selector)
+
+Permet de supprimer les noeuds qui ne correspondent pas au sélecteur dans le wrapper.
+
+ETC... https://airbnb.io/enzyme/docs/api/shallow.html
+
 En plus de Jest, React propose un ensemble de fonctions utiles à la manipulation des composants dans le cadre de tests au travers de l'API react-addons-test-utils.
 
 ### Simulate
 
-**Permet de simuler un évènement sur un noeud DOM avec des données d'event optionnelles.
-Simulate propose une méthode pour chaque événement compris par React.**
+Permet de simuler un évènement sur un noeud DOM avec des données d'event optionnelles.
+Simulate propose une méthode pour chaque événement compris par React.
 
 ```Javascript
 // Click sur un element
