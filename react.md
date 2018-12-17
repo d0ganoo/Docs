@@ -5,11 +5,13 @@
 
 # React
 
-Au départ, React.js a été développé par Facebook pour ses propres besoins : avoir une interface utilisateur (UI) à la fois dynamique et performante. Depuis il a connu une très grande popularité notamment dans de nombreuses start-up. En 2011, Jordan Walke (également créateur de Reason) et son équipe issue de Facebook développent le projet React JS : une bibliothèque JavaScript qui propose une nouvelle façon de générer les pages web, en rendant plus naturelles et plus fluides les interactions utilisateur.
+Au départ, React.js a été développé par Facebook pour ses propres besoins : avoir une interface utilisateur (UI) à la fois dynamique et performante. Depuis il a connu une très grande popularité notamment dans de nombreuses start-up. En 2011, Jordan Walke (également créateur de Reason) et son équipe issue de Facebook développent le projet React JS : une bibliothèque JavaScript qui propose une nouvelle façon de générer les pages web (SPA => Single page application), en rendant plus naturelles et plus fluides les interactions utilisateur.
 
 ### Les avantages
 
 - DOM (document object model) est un compromis des vus sur les entrées et sorties de données. Le DOM virtuel de React est plus rapide que le modèle de rafraîchissement complet conventionnel, puisque le DOM virtuel ne rafraîchit que certaines parties de la page. Ce qui est intéressant, c’est que l’équipe de Facebook n’était pas consciente qu’une actualisation partielle d’une page se révélerait plus rapide. Facebook cherchait juste un moyen de réduire leur temps de reconstruction, et le rafraîchissement partiel du DOM était juste une bonne solution. Au final, cela augmente les performances et accélère la programmation.
+
+- Prends en charge le server-side rendering (Bien mieux avec Next.js) 
 
 - Vous pouvez réutiliser des composants de code dans React JS, ce qui vous fait gagner beaucoup de temps.
 
@@ -22,7 +24,7 @@ Au départ, React.js a été développé par Facebook pour ses propres besoins :
 Le JSX
 ---
 
-JSX (une extension syntaxique de JS) est recommendé pour React. Exemple de JSX :  
+Le JSX, une extension de syntaxe de type XML à ECMAScrpit (Signifie Javascript XML) est recommendé pour React. Exemple de JSX :  
 ```Javascript
 const element = <h1>Hello, world!</h1>;
 ```
@@ -43,10 +45,33 @@ Les éléments sont les atomes des applis React. Ils décrivent ce qu’on veut 
 
 React ne change que ce qui est nécessaire, si on veut remplacer un élément par un autre, il va comparer les deux. Seule la différence sera modifiée dans le DOM, au lieu de réécrire tout le nouvel élément.
 
+```Javascript
+const element = React.createElement(
+  'div',
+  {id: 'login-btn'},
+  'Login'
+)
+
+// Cette fonction React.createElement() retourne un objet:
+
+{
+  type: 'div',
+  props: {
+    children: 'Login',
+    id: 'login-btn'
+  }
+}
+
+// Le rendu :
+
+<div id='login-btn'>Login</div>
+
+```
+
 Les components
 ---
 
-Les components sont des fonctions JS qui acceptent un seul paramètre (les “props”) et qui renvoie un élément React.  
+Les components sont des fonctions JS qui acceptent un seul paramètre (les “props”) et qui renvoie du JSX.  
 ```Javascript
 function Welcome(props) {  
   return <h1>Hello, {props.name}</h1>;  
@@ -55,20 +80,40 @@ function Welcome(props) {
 
 On peut afficher le rendu d’un component avec JSX.  
 ```Javascript
+
 function Welcome(props) {  
   return <h1>Hello, {props.name}</h1>;  
 }
 
 const element = <Welcome name="Sara" />;  
+
 ReactDOM.render(  
   element,  
   document.getElementById('root')  
 );
+
+// D'autres façons de déclarer un component
+
+const element1 = () => <h1>Hello world</h1>;
+
+class element2 extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return <h1>Hello World</h1>
+  }
+}
+
 ```
 
 Attention : il faut nommer les components avec une majuscule, car React traite les balises en minuscule comme des balises HTML classiques.
 On peut appeler des components dans d’autre components.
 Règle de base en React : les props doivent être read-only.
+
+Comment faire pour savoir s'il faut utiliser un component de class ou de function ?
+
+Si le composant nécessite un state ou un cycle de vie, utilisez le class component sinon utilisez un function component.
 
 Les états et le cycle de vie
 ---
