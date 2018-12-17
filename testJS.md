@@ -5,7 +5,30 @@
 
 # Test Js
 
-### Règles
+### Couverture de test
+
+Lorsqu’on commence à avoir des tests, il devient possible de mesurer la couverture de tests, c’est-à-dire le pourcentage de notre code—à l’expression près !–qui est sollicité par les tests. On peut alors repérer les parties non testées, ou insuffisamment testées, et savoir ainsi où concentrer nos prochains efforts d’écriture de tests.
+
+Il existe trois niveaux de test:
+
+Les tests unitaires:
+
+  Permet de tester une unité de code. Principalement une méthode ou function 
+
+Les tests d'intégrations
+
+  Permet de tester le comportement de plusieurs components mais ensemble. Pour savoir s'ils intéragissent bien l'un avec l'autre.
+  Intéraction avec la base de données
+
+Les tests fonctionnels 
+
+  Permet de tester le produit final.
+
+  Navigateur, driver pour piloter de manière automatiser ce navigateur et un langague pour communiquer avec le driver
+  
+  ex: cypress
+
+### Règles tests unitaires
 
 * Un test unitaire doit être véritablement unitaire. La classe testée doit l’être en isolation complète, afin de ne tester qu’une classe (et une méthode) à la fois, le SUT (System Under Test).
 * Si une classe est difficile à tester, il est temps de faire du refactoring. Est-elle trop volumineuse ? Présente-t-elle trop de dépendances ? Profitez de l’occasion pour la découper et déplacer du code dans des classes annexes.
@@ -44,25 +67,3 @@ Un harnais de test est un programme qui agit en quelque sorte comme le chef d’
 Certains harnais font davantage, en fournissant par exemple une bibliothèque d’assertions intégrée, en mesurant la couverture de tests, etc.
 Il existe de nombreux harnais pour JavaScript, les plus populaires étant Mocha, Jest et Jasmine. Create React App utilise Jest, qui est le plus populaire dans l’univers React, et utilisé par Facebook pour tester React lui-même et tout leur propre code JavaScript.
 
-### Couverture de test
-
-Lorsqu’on commence à avoir des tests, il devient possible de mesurer la couverture de tests, c’est-à-dire le pourcentage de notre code—à l’expression près !–qui est sollicité par les tests. On peut alors repérer les parties non testées, ou insuffisamment testées, et savoir ainsi où concentrer nos prochains efforts d’écriture de tests.
-
-Il existe trois niveaux de test:
-
-Les tests unitaires:
-
-  Permet de tester une unité de code. Principalement une méthode ou function 
-
-Les tests d'intégrations
-
-  Permet de tester le comportement de plusieurs components mais ensemble. Pour savoir s'ils intéragissent bien l'un avec l'autre.
-  Intéraction avec la base de données
-
-Les tests fonctionnels 
-
-  Permet de tester le produit final.
-
-  Navigateur, driver pour piloter de manière automatiser ce navigateur et un langague pour communiquer avec le driver
-  
-  ex: cypress
