@@ -9,18 +9,18 @@
 
 Lorsqu’on commence à avoir des tests, il devient possible de mesurer la couverture de tests, c’est-à-dire le pourcentage de notre code—à l’expression près !–qui est sollicité par les tests. On peut alors repérer les parties non testées, ou insuffisamment testées, et savoir ainsi où concentrer nos prochains efforts d’écriture de tests.
 
-Il existe trois niveaux de test:
+Il existe **TROIS** niveaux de test:
 
-Les tests unitaires:
+**Les tests unitaires:**
 
   Permet de tester une unité de code. Principalement une méthode ou function 
 
-Les tests d'intégrations
+**Les tests d'intégrations**
 
   Permet de tester le comportement de plusieurs components mais ensemble. Pour savoir s'ils intéragissent bien l'un avec l'autre.
   Intéraction avec la base de données
 
-Les tests fonctionnels 
+**Les tests fonctionnels **
 
   Permet de tester le produit final.
 
