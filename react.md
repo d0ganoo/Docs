@@ -3,6 +3,8 @@
 
 * * * 
 
+// Reprendre la doc à partir des PureComponents
+
 # React
 
 Au départ, React.js a été développé par Facebook pour ses propres besoins : avoir une interface utilisateur (UI) à la fois dynamique et performante. Depuis il a connu une très grande popularité notamment dans de nombreuses start-up. En 2011, Jordan Walke (également créateur de Reason) et son équipe issue de Facebook développent le projet React JS : une bibliothèque JavaScript qui propose une nouvelle façon de générer les pages web (SPA => Single page application), en rendant plus naturelles et plus fluides les interactions utilisateur.
