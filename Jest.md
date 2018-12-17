@@ -100,6 +100,64 @@ findAllInRenderedTree(
   tree,
   test
 )
+```
+### scryRenderedDOMComponentsWithClass()
+
+Trouve tous les éléments DOM des composants de l'arborescence qui ont le nom de classe correspond à className.
+
+```Javascript
+scryRenderedDOMComponentsWithClass(
+  tree,
+  className
 )
 ```
+### findRenderedDOMComponentWithClass()
 
+Comme scryRenderedDOMComponentsWithClass () mais attend un seul résultat et renvoie ce résultat ou lève une exception s'il existe un nombre de correspondances différent de celui-ci.
+
+```Javascript
+findRenderedDOMComponentWithClass(
+  tree,
+  className
+)
+```
+### scryRenderedDOMComponentsWithTag()
+
+Trouve tous les éléments DOM des composants de l'arborescence rendue qui sont des composants DOM dont le nom de balise correspond à tagName.
+
+```Javascript
+scryRenderedDOMComponentsWithTag(
+  tree,
+  tagName
+)
+```
+### findRenderedDOMComponentWithTag()
+
+Comme scryRenderedDOMComponentsWithTag () mais attend un seul résultat et renvoie ce résultat ou lève une exception s'il existe un nombre de correspondances différent de celui-ci.
+
+```Javascript
+findRenderedDOMComponentWithTag(
+  tree,
+  tagName
+)
+```
+### scryRenderedComponentsWithType()
+
+Trouve toutes les occurrences de composants dont le type est égal à composantClass.
+
+```Javascript
+scryRenderedComponentsWithType(
+  tree,
+  componentClass
+)
+```
+### findRenderedComponentWithType()
+
+Identique à scryRenderedComponentsWithType () mais s'attend à ce qu'il y ait un résultat et renvoie ce résultat ou lève une exception s'il existe un nombre de correspondances différent de celui-ci.
+
+```Javascript
+findRenderedComponentWithType(
+  tree,
+  componentClass
+)
+```
