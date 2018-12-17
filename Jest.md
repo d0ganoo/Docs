@@ -22,8 +22,8 @@ En plus de Jest, React propose un ensemble de fonctions utiles à la manipulatio
 
 ### Simulate
 
-Permet de simuler un évènement sur un noeud DOM avec des données d'event optionnelles.
-Simulate propose une méthode pour chaque événement compris par React.
+**Permet de simuler un évènement sur un noeud DOM avec des données d'event optionnelles.
+Simulate propose une méthode pour chaque événement compris par React.**
 
 ```Javascript
 // Click sur un element
