@@ -17,3 +17,89 @@ https://jestjs.io/docs/en/expect.html#content
 Jest: Permet de tester des fonctions standards
 
 Enzyme: Permet de tester le rendu des composants react
+
+En plus de Jest, React propose un ensemble de fonctions utiles à la manipulation des composants dans le cadre de tests au travers de l'API react-addons-test-utils.
+
+### Simulate
+
+Permet de simuler un évènement sur un noeud DOM avec des données d'event optionnelles.
+Simulate propose une méthode pour chaque événement compris par React.
+
+```Javascript
+// Click sur un element
+
+// <button ref={(node) => this.button = node}>...</button>
+const node = this.button;
+ReactTestUtils.Simulate.click(node);
+
+// Changer la valeur d'un input et taper sur la tuche entrée
+
+// <input ref={(node) => this.textInput = node} />
+const node = this.textInput;
+node.value = 'giraffe';
+ReactTestUtils.Simulate.change(node);
+ReactTestUtils.Simulate.keyDown(node, {key: "Enter", keyCode: 13, which: 13});
+
+```
+### renderIntoDocument()
+
+Rendre un élément React dans un nœud DOM détaché du document. Cette fonction nécessite un DOM.
+
+### mockComponent ()
+
+Ne pas utiliser  // Utiliser jest.mock() ou shallow rendering
+
+### isElement ()
+
+Retourne true si l'élément est un élément React.
+
+```Javascript
+isElement(element)
+```
+
+### isElementOfType()
+
+Renvoie true si élément est un élément React dont le type est d'une classe de composants React.
+
+```Javascript
+isElementOfType(
+  element,
+  componentClass
+)
+```
+### isDOMComponent()
+
+Renvoie true si l'instance est un composant DOM (tel qu'un <div> ou un <span>).
+  
+```Javascript
+isDOMComponent(instance)
+```
+
+### isCompositeComponent()
+
+Renvoie true si l'instance est un composant défini par l'utilisateur, tel qu'une classe ou une fonction.
+
+### isCompositeComponentWithType()
+
+Renvoie true si l'instance est un composant dont le type est d'une classe de composants React.
+
+```Javascript
+isCompositeComponentWithType(
+  instance,
+  componentClass
+)
+```
+
+### findAllInRenderedTree()
+
+Parcours tous les composants de l'arborescence et accumule tous les composants pour lesquels test(component) est TRUE.
+Ce n'est pas très utile en soi, mais c'est une primitive pour d'autress tests.
+
+```Javascript
+findAllInRenderedTree(
+  tree,
+  test
+)
+)
+```
+
