@@ -39,7 +39,7 @@ Il existe **TROIS** niveaux de test:
 * Pensez à utiliser un framework de mocks pour injecter les dépendances sous forme de bouchons. Ces outils permettent de respecter le commandement n°1. Ne bannissez pas pour autant les bouchons codés à la main ; ils peuvent parfois rendre le test unitaire plus simple et plus lisible qu’avec un mock provenant d’un framework.
 * Identifiez précisément les étapes setup, exercise, verify, teardown dans votre code. On retrouve ces quatre étapes dans tout test unitaire.
 * Ne vous concentrez pas sur une couverture de code à 100%. Ce n’est qu’un indicateur technique, qui doit être examiné dans le contexte de l’application, et qui ne prouve en rien la qualité du code et des tests unitaires.
-* Ne développez pas vos tests unitaires « plus tard ». Si vous n’utilisez pas l’approche TDD, développez-les le plus tôt possible.
+* Ne développez pas vos tests unitaires « plus tard ». Si vous n’utilisez pas l’approche TDD (Test driven development: écrire les tests avant le code source), développez-les le plus tôt possible.
 
 ### Assertions
 
