@@ -82,7 +82,7 @@ Rendre un élément React dans un nœud DOM détaché du document. Cette fonctio
 
 ### mockComponent ()
 
-Ne pas utiliser  // Utiliser jest.mock() ou shallow rendering
+Ne pas utiliser  // Utiliser jest.mock() ou **shallow rendering**
 
 ### isElement ()
 
