@@ -18,7 +18,7 @@ Jest: Permet de tester des fonctions standards
 
 Enzyme: Permet de tester le rendu des composants react
 
-  ** SHALLOW RENDERING ** 
+### SHALLOW RENDERING
   
   Le shallow rendering est utile pour vous contraindre à tester un composant en tant qu'unité et pour vous assurer que vos tests n'affichent pas indirectement le comportement des composants enfants.
   
@@ -37,15 +37,15 @@ Enzyme: Permet de tester le rendu des composants react
 On shallow le component pour l'isoler de ses enfants, puis on peut effectuer des fonctions sur ce wrapper.
 Exemples : 
 
-** .find(selector) **
+**.find(selector)**
 
 La fonction find permet de rechercher tous les noeuds de l'arbre de rendu correspondant au sélecteur fourni.
 
-** .findWhere(predicate) ** 
+**.findWhere(predicate)** 
 
 Permet de rechercher tous les nœuds de l’arbre qui renvoie true pour la fonction de prédicat fournie.
 
-** .filter(selector) **
+**.filter(selector)**
 
 Permet de supprimer les noeuds qui ne correspondent pas au sélecteur dans le wrapper.
 
