@@ -20,7 +20,7 @@ Il existe **TROIS** niveaux de test:
   Permet de tester le comportement de plusieurs components mais ensemble. Pour savoir s'ils intéragissent bien l'un avec l'autre.
   Intéraction avec la base de données
 
-**Les tests fonctionnels **
+**Les tests fonctionnels**
 
   Permet de tester le produit final.
 
