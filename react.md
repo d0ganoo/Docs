@@ -123,6 +123,11 @@ React.PureComponent est exactement le même que React.Component, à la différen
 Lorsque les props ou la state changent, le PureComponent effectue une comparaison entre les props et la state.
 Un PureComponent se re-render uniquement si l’une de ses props a changée.
 
+HOC - Higher-Order components
+---
+
+Un HOC est une fonction qui prend un composant en paramètre et retourne un nouveau composant. Il permet de pouvoir réutiliser la même logique pour plusieurs components. On dit que c'est des fonctions purs car elles n'ont pas de side effect. Ils ne modifieront ni ne copieront le comportement du composant d'entré 
+
 Les états et le cycle de vie
 ---
 
