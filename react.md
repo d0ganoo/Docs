@@ -3,7 +3,7 @@
 
 * * * 
 
-// Reprendre la doc à partir des PureComponents
+// Reprendre la doc à partir des cycles de vies
 
 # React
 
@@ -39,6 +39,27 @@ En JSX on peut uttiliser entre accolades toute expression JS valide.
 const name = 'Josh Perez';  
 const element = <h1>Hello, {name}</h1>;
 ```
+
+State et props
+---
+
+Le props et la state d'un composant sont des objets javascript. Bien que les influent sur le rendu, leurs fonctionnalités sont différentes en ce qui concerne les composants.
+Les props sont transmis au composant de la même manière que des paramètres de fonction, tandis que la state est géré dans le composant dans le composant de la même manière ques les variables déclarées dans une fonction.
+
+Les états sont les attributs privés des components, on ne peut s’en servir que si on déclare le component sous forme d’une classe (ES6) et non pas une fonction. On déclare l’état dans le constructeur de la classe, et on écrit une méthode “render()” pour spécifier ce que le component doit renvoyer (on y écrit la même chose que ce qu’on écrit dans le corps du même component déclaré sous forme de fonction.).
+
+Pour mettre à jour l’état d’un components on utilise la méthode “setState()”. Son appel déclanchera un nouvel appel de “render()”.
+
+Attention : il ne faut pas modifier l’état directement :  
+```Javascript
+this.state.comment = 'Hello'; // Wrong  
+this.setState({comment: 'Hello'}); // Correct
+```
+
+“props” et “state” peuvent être mis à jour de façon asynchrone, donc on ne peut pas se baser sur leur valeur pour calculer le nouveau “state”. Une solution : “setState” accepte une fonction en argument, qui prend en paramètre l’ancien state ainsi que le props au moment de l’exécution.
+
+Le flux de données est unidirectionnel : un component parent peut passer des données vers ses enfants, mais pas l’inverse.
+
 
 Les éléments
 ---
@@ -156,26 +177,13 @@ function HOC(WrappedComponent) {
 }
 ```
 
-Les états et le cycle de vie
+Cycle de vie
 ---
-
-Les états sont les attributs privés d’un components, on ne peut s’en servir que si on déclare le component sous forme d’une classe (ES6) et non pas une fonction. On déclare l’état dans le constructeur de la classe, et on écrit une méthode “render()” pour spécifier ce que le component doit renvoyer (on y écrit la même chose que ce qu’on écrit dans le corps du même component déclaré sous forme de fonction.).
 
 Quand un component écrit dans le DOM pour la première fois, on dit qu’il “mount”, quand ce qu’il écrit dans le DOM disparaît, il “unmount”. On peut écrire des méthodes spéciales appelées lors de ces deux évenement, respectivement “componentDidMount
 ” et “componentWillUnmount”. Ces méthodes s’appellent des “lifetime hooks”.
 
-Pour mettre à jour l’état d’un components on utilise la méthode “setState()”. Son appel déclanchera un nouvel appel de “render()”.
 
-Attention : il ne faut pas modifier l’état directement :  
-```Javascript
-this.state.comment = 'Hello'; // Wrong  
-this.setState({comment: 'Hello'}); // Correct
-```
-
-
-“props” et “state” peuvent être mis à jour de façon asynchrone, donc on ne peut pas se baser sur leur valeur pour calculer le nouveau “state”. Une solution : “setState” accepte une fonction en argument, qui prend en paramètre l’ancien state ainsi que le props au moment de l’exécution.
-
-Le flux de données est unidirectionnel : un component parent peut passer des données vers ses enfants, mais pas l’inverse.
 
 Ref
 ---
