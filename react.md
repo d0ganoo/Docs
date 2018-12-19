@@ -113,11 +113,11 @@ Attention : il faut nommer les components avec une majuscule, car React traite l
 On peut appeler des components dans d’autre components.
 Règle de base en React : les props doivent être read-only.
 
-1- Comment faire pour savoir s'il faut utiliser un component de class ou de function ?
+**1- Comment faire pour savoir s'il faut utiliser un component de class ou de function ?**
 
 Si le composant nécessite un state ou un cycle de vie, utilisez le class component sinon utilisez un function component.
 
-2- Qu'est-ce qu'un composant pur ?
+**2- Qu'est-ce qu'un composant pur ?**
 
 React.PureComponent est exactement le même que React.Component, à la différence qu'il gère pour vous la méthode shouldComponentUpdate().
 Lorsque les props ou la state changent, le PureComponent effectue une comparaison entre les props et la state.
@@ -126,7 +126,35 @@ Un PureComponent se re-render uniquement si l’une de ses props a changée.
 HOC - Higher-Order components
 ---
 
-Un HOC est une fonction qui prend un composant en paramètre et retourne un nouveau composant. Il permet de pouvoir réutiliser la même logique pour plusieurs components. On dit que c'est des fonctions purs car elles n'ont pas de side effect. Ils ne modifieront ni ne copieront le comportement du composant d'entré 
+Un HOC est une fonction qui prend un composant en paramètre et retourne un nouveau composant. Il permet de pouvoir réutiliser la même logique pour plusieurs components. On dit que c'est des fonctions purs car elles n'ont pas de side effect. Ils ne modifieront ni ne copieront le comportement du composant d'entré.
+
+**HOC peut être  réutilisé dans plusieurs cas:**
+
+- Réutiliser du code, de la logique
+- Render hijacking : capacité de contrôler ce qu'un composant produira à partir d'un autre composant. Envelopper votre composant dans un composant d'ordre supérieur qui permettra de surcharger en lui injectant de nouvelle props.
+- Abstraction et manipulation de la state.
+- Manipulation des props
+
+**Comment créer un proxy pour le composant HOC?**
+
+Vous pouvez ajouter / modifier les props transmis au composant à l'aide du modèle proxy props, comme suit:
+
+```Javascript
+function HOC(WrappedComponent) {
+  return class Test extends Component {
+    render() {
+      const newProps = {
+        title: 'New Header',
+        footer: false,
+        showFeatureX: false,
+        showFeatureY: true
+      }
+
+      return <WrappedComponent {...this.props} {...newProps} />
+    }
+  }
+}
+```
 
 Les états et le cycle de vie
 ---
