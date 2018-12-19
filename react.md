@@ -120,7 +120,8 @@ Si le composant nécessite un state ou un cycle de vie, utilisez le class compon
 2- Qu'est-ce qu'un composant pur ?
 
 React.PureComponent est exactement le même que React.Component, à la différence qu'il gère pour vous la méthode shouldComponentUpdate().
-Lorsque les props ou la state changent, le PureComponent effectue une comparaison entre les props et la state
+Lorsque les props ou la state changent, le PureComponent effectue une comparaison entre les props et la state.
+Un PureComponent se re-render uniquement si l’une de ses props a changée.
 
 Les états et le cycle de vie
 ---
