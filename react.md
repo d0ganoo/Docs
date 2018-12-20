@@ -60,6 +60,15 @@ this.setState({comment: 'Hello'}); // Correct
 
 Le flux de données est unidirectionnel : un component parent peut passer des données vers ses enfants, mais pas l’inverse.
 
+**Quel est le but de la fonction de callback en tant qu'argument de setState ()?**
+
+La fonction de rappel est appelée lorsque setState est terminé et que le composant est rendu. Comme setState () est asynchrone, la fonction de rappel est utilisée pour toute action ultérieure.
+
+Remarque: Il est recommandé d'utiliser la méthode de cycle de vie plutôt que cette fonction de rappel.
+
+```Javascript
+setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
+```
 
 Les éléments
 ---
@@ -143,6 +152,108 @@ Si le composant nécessite un state ou un cycle de vie, utilisez le class compon
 React.PureComponent est exactement le même que React.Component, à la différence qu'il gère pour vous la méthode shouldComponentUpdate().
 Lorsque les props ou la state changent, le PureComponent effectue une comparaison entre les props et la state.
 Un PureComponent se re-render uniquement si l’une de ses props a changée.
+
+Les events
+---
+
+Les events en React sont écrit en camelCase.
+
+```Javascript
+<button onClick={activateLasers}>
+```
+
+**Comment bind les méthodes ou les gestionnaires d’événements dans des callbacks JSX?**
+
+Pour bind, il y a plusieurs façon de faire:
+
+1- Bind dans le constructor
+
+```Javascript
+class Component extends React.Componenet {
+  constructor(props) {
+    super(props)
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    // ...
+  }
+  
+  render(){
+    return (
+      <button onClick={this.handleClick}>
+          Click me
+      </button>
+    )
+  }
+}
+```
+2- Bind les methodes des class grâce à l'arrow function
+
+```Javascript
+class Component extends React.Componenet {
+  constructor(props) {
+    super(props)
+  }
+
+  handleClick = () => {
+    console.log('this is:', this)
+  }
+  
+  render(){
+    return (
+      <button onClick={this.handleClick}>
+          Click me
+      </button>
+    )
+  }
+}
+```
+3- Utiliser l'opérateur de bind :: ES7
+
+```Javascript
+class Component extends React.Componenet {
+  constructor(props) {
+    super(props)
+  }
+
+  handleClick(){
+    console.log('this is:', this)
+  }
+  
+  render(){
+    return (
+      <button onClick={::this.handleClick}>
+          Click me
+      </button>
+    )
+  }
+}
+```
+
+4- Arrow function directement dans le callback
+
+```Javascript
+class Component extends React.Componenet {
+  constructor(props) {
+    super(props)
+  }
+
+  handleClick(event){
+    console.log('this is:', this)
+  }
+  
+  render(){
+    return (
+     <button onClick={(event) => this.handleClick(event)}>
+        Click me
+     </button>
+    )
+  }
+}
+```
+Remarque: Si le rappel est transmis en tant que prop aux composants enfants, ceux-ci peuvent effectuer un nouveau rendu. Dans ces cas, il est préférable d’utiliser l’approche syntaxique .bind () ou des champs de classe publics en tenant compte des performances.
+
 
 HOC - Higher-Order components
 ---
