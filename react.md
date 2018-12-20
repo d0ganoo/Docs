@@ -255,6 +255,28 @@ class Component extends React.Componenet {
 Remarque: Si le rappel est transmis en tant que prop aux composants enfants, ceux-ci peuvent effectuer un nouveau rendu. Dans ces cas, il est préférable d’utiliser l’approche syntaxique .bind () ou des champs de classe publics en tenant compte des performances.
 
 
+5- Bind directement dans la fonction de callback
+
+```Javascript
+class Component extends React.Componenet {
+  constructor(props) {
+    super(props)
+  }
+
+  handleClick(id){
+    console.log('this is:', this)
+  }
+  
+  render(){
+    return (
+     <button onClick={this.handleClick.bind(this, id)} >
+        Click me
+     </button>
+    )
+  }
+}
+```
+
 HOC - Higher-Order components
 ---
 
@@ -294,12 +316,54 @@ Cycle de vie
 Quand un component écrit dans le DOM pour la première fois, on dit qu’il “mount”, quand ce qu’il écrit dans le DOM disparaît, il “unmount”. On peut écrire des méthodes spéciales appelées lors de ces deux évenement, respectivement “componentDidMount
 ” et “componentWillUnmount”. Ces méthodes s’appellent des “lifetime hooks”.
 
+**Les différentes phases du cycle de vie d'un composant?**
 
+Il existe 4 phases:
 
-Ref
+1- **Initialisation:** A cette étape, le composant prépare la configuration de la state initial et des props par défault.
+2- **Mounting:** Le composant est prêt à être mount dans le DOM du navgateur. ComponentWillMount() et componentDidMount().
+3- **Updating:** Envoie des nouvelles props et mise à jour la state    
+4- **Unmounting:** Le composant est démonté du DOM.                      
+
+RefInitialization: In this phase component prepares setting up the initial state and default props.
+
+Mounting: The component is ready to mount in the browser DOM. This phase covers componentWillMount() and componentDidMount() lifecycle methods.
+
+Updating: In this phase, the component get updated in two ways, sending the new props and updating the state. This phase covers shouldComponentUpdate(), componentWillUpdate() and componentDidUpdate() lifecycle methods.
+
+Unmounting: In this last phase, the component is not needed and get unmounted from the browser DOM. This phase includes componentWillUnmount() lifecycle method. 
 ---
 
+La ref est utilisée pour renvoyer une référence à l'élément. Ils doivent être évités dans la plupart des cas. Toutefois, ils peuvent être utiles lorsque vous avez besoin d'un accès direct à l'élément DOM ou à une instance d'un composant.
 
+**Créer une référence :**
+
+```Javascript
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props)
+    this.myRef = React.createRef()
+  }
+  render() {
+    return <div ref={this.myRef} />
+  }
+}
+```
+**Les forward refs**
+
+Les forward refs permettent à certains composants de prendre une référence qu’ils reçoivent et de la transmettre à un enfant.
+
+```Javascript
+const ButtonElement = React.forwardRef((props, ref) => (
+  <button ref={ref} className="CustomButton">
+    {props.children}
+  </button>
+));
+
+// Create ref to the DOM button:
+const ref = React.createRef();
+<ButtonElement ref={ref}>{'Forward Ref'}</ButtonElement>
+```
 
 Error Bundaries
 ---
