@@ -320,22 +320,21 @@ Quand un component écrit dans le DOM pour la première fois, on dit qu’il “
 
 Il existe 4 phases:
 
-1- **Initialisation:** A cette étape, le composant prépare la configuration de la state initial et des props par défault.
-2- **Mounting:** Le composant est prêt à être mount dans le DOM du navgateur. ComponentWillMount() et componentDidMount().
-3- **Updating:** Envoie des nouvelles props et mise à jour la state    
-4- **Unmounting:** Le composant est démonté du DOM.
-5- **componentWillReceiveProps:** Exécuté quand une prop est mise à jour pour déclencher la transition de state
-6- **shouldComponentUpdate:** Détermine si le composant sera mis à jour ou non. Par défault, il retourne TRUE. Si vous êtes certain que le composant n'a pas besoin d'être rendu, vous pouvez retourné FALSE.
+1. **Initialisation:** A cette étape, le composant prépare la configuration de la state initial et des props par défault.
+2. **Mounting:** Le composant est prêt à être mount dans le DOM du navgateur. ComponentWillMount() et componentDidMount().
+3. **Updating:** Envoie des nouvelles props et mise à jour la state    
+4. **Unmounting:** Le composant est démonté du DOM.
+
+![lifecycle](https://github.com/sudheerj/reactjs-interview-questions/blob/master/images/phases.png)
+
+* **componentWillMount():** Exécuté avant le rendu
+* **componentDidMount():** Exécuté après le premier rendu. Les requêtes ajax doivent avoir lieu ici
+* **componentWillReceiveProps():** Exécuté quand une prop est mise à jour pour déclencher la transition de state
+* **shouldComponentUpdate:** Détermine si le composant sera mis à jour ou non. Par défault, il retourne TRUE. Si vous êtes certain que le composant n'a pas besoin d'être rendu, vous pouvez retourné FALSE.
 C'est la fonction idéale pour améliorer les performances (Eviter des rendus inutiles)
-7- **componentWillUpdate:** Exécuté avant de re-render le composant une fois que shouldComponentUpdate renvoie TRUE
-8- **componentDidUpdate:** Il est principalement utilisé pour mettre à jour le DOM en réponse à un changement de props ou de la state.
-9- **componentWillUnmount:** Il sera utilisé pour annuler tout requête reseau sortante ou pour supprimer tous les écouteurs d'évènements associés au composant.
-
-https://github.com/sudheerj/reactjs-interview-questions/blob/master/images/phases.png?raw=true
-
-**componentWillMount():** Exécuté avant le rendu
-**componentDidMount():** Exécuté après le premier rendu. Les requêtes ajax doivent avoir lieu ici
-**componentWillReceiveProps():** Exécuté quand une prop est mis à jour
+* **componentWillUpdate:** Exécuté avant de re-render le composant une fois que shouldComponentUpdate renvoie TRUE
+* **componentDidUpdate:** Il est principalement utilisé pour mettre à jour le DOM en réponse à un changement de props ou de la state.
+* **componentWillUnmount:** Il sera utilisé pour annuler tout requête reseau sortante ou pour supprimer tous les écouteurs d'évènements associés au composant.
 
 Les refs 
 ---
