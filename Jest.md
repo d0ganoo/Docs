@@ -49,6 +49,26 @@ Permet de rechercher tous les nœuds de l’arbre qui renvoie true pour la fonct
 
 Permet de supprimer les noeuds qui ne correspondent pas au sélecteur dans le wrapper.
 
+**.filterWhere(predicate)**
+
+Permet de supprimer tous les noeuds qui ne renvoient pas la valeur true pour la fonction de prédicat fournie.
+
+**.hostNodes()**
+
+Supprime les noeuds qui ne sont pas des noeuds hôtes.
+
+**.contains(nodeOrNodes)**
+
+Indique si noeud ou un tableau de noeuds se trouve dans l'arbre de rendu.
+
+**.containsMatchingElement(node)**
+
+Indique si un élément react existe ou non dans l'arbre de rendu.
+
+**.containsAllMatchingElements(nodes)**
+
+
+
 ETC... https://airbnb.io/enzyme/docs/api/shallow.html
 
 ### react-addons-test-utils
