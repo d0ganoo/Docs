@@ -67,6 +67,176 @@ Indique si un élément react existe ou non dans l'arbre de rendu.
 
 **.containsAllMatchingElements(nodes)**
 
+Retourne si tous les éléments react existent ou non dans l'arbre de rendu.
+
+**.containsAnyMatchingElements(nodes)**
+
+Retourne si l'un des éléments react existe ou non dans l'arbre de rendu.
+
+**.equals(node)**
+
+Indique si l'arborescence de rendu actuelle est égale ou non au nœud donné, en fonction de la valeur attendue.
+
+**matchesElement(node)**
+
+Retourne si un élément react correspond ou non à l'arbre de rendu.
+
+**.hasClass(ClassName)**
+
+Indique si le noeud actuel a ou non le nom de classe donné.
+
+**.is(selector)**
+
+Indique si le noeud actuel correspond ou non à un sélecteur fourni.
+
+**.exists([selector])**
+
+Indique si le nœud actuel existe ou non, ou, si un sélecteur est fourni, si ce sélecteur a des résultats correspondants.
+
+**.isEmptyRender()**
+
+Indique si le composant actuel renvoie ou non une fausse valeur.
+
+**.not(selector)**
+
+Supprime dans le wrapper actuel les nœuds qui correspondent au sélecteur fourni. (inverse de .filter ())
+
+**.children()**
+
+Obtenez un wrapper avec tous les nœuds enfants du wrapper actuel.
+
+**.childAt(index)**
+
+Retourne un nouveau wrapper avec enfant à l'index spécifié.
+
+**.parents()**
+
+Obtenez un wrapper avec tous les parents (ancêtres) du nœud actuel.
+
+**.parent()**
+
+Obtenez un wrapper avec le parent direct du nœud actuel.
+
+**.closest(selector)**
+
+Obtenez un wrapper avec le premier ancêtre du nœud actuel pour qu'il corresponde au sélecteur fourni.
+
+**.shallow([options])**
+
+Shallow rend le nœud actuel et renvoie un wrapper.
+
+**.render()**
+
+Renvoie un CheerioWrapper du sous-arbre du nœud actuel.
+
+**.renderProp(key)()**
+
+Retourne un wrapper du noeud rendu en fonction de la prop de rendu fournie.
+
+**.unmount()**
+
+Une méthode qui démonte le composant.
+
+**.text()** (return String)
+
+Renvoie une représentation sous forme de chaîne des nœuds de texte dans l'arborescence de rendu actuelle.
+
+**.html()**
+
+Renvoie le rendu html static du noeud courant.
+
+**.get(index)**
+
+Retourne le noeud à l'index fourni du wrapper actuel.
+
+**.getElement()**
+
+Retourne l'élement react encapsulé.
+
+**.getElements()
+
+Retourne les éléments react encapsulé
+
+**.at(index)**
+
+Retourne un wrapper du noeud à l'index fourni du wrapper actuel.
+
+**.first()**
+
+Retourne un wrapper du premier noeud du wrapper courant.
+
+**.last()**
+
+Retourne un wrapper du dernier noeud du wrapper courant.
+
+**.state([key])**
+
+Retourne la state du composant racine
+
+**.context()**
+
+Retourne le context du composant racine
+
+**.props()**
+
+Retourne les props du noeud courant
+
+**.prop(key)**
+
+Retourne le nom de la prop du noeud courant.
+
+**.key()** 
+
+Retourne la clé du noeud courrant 
+
+**.simulate(event[, data])**
+
+Simule un évènement sur le noeud courant.
+
+**.setState(nextState)**
+
+Définit manuellement l'état du composant racine.
+
+**.setProps(nextProps[, callback])**
+
+Définit manuellement les props du composant racine.
+
+**.setContext(context)**
+
+Définit manuellement le context du composant racine.
+
+**.instance()**
+
+Retourne l'instance du composant racine.
+
+**.update()**
+
+Appel .forceUpdate() sur l'instance du composant racine.
+
+**.debug()**
+
+Retourne une représentation sous forme de chaîne de l'arbre de rendu  actuel à des fins de débogage.
+
+**type()**
+
+Retourne le type du noeud actuel du wrapper.
+
+**.name()**
+
+Retourne le nom du noeud courant du wrapper.
+
+**.forEach(fn)*
+
+Parcourt chaque noeud du wrapper actuel et exécute la fonction fournie
+
+**.map(fn)**
+
+Mappe le tableau actuel de noeuds vers un autre tableau en réponse à la fonction fournie.
+
+**.reduce(fn[, initialValue])**
+
+Réduit le tableau actuel de nœuds en une valeur, de droite à gauche.
+
 
 
 ETC... https://airbnb.io/enzyme/docs/api/shallow.html
