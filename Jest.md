@@ -11,12 +11,113 @@ Create React App étend les extensions examinées (il ajoute  .mjs  et  .jsx  ),
 
 Jest fournit de base une fonction  expect()  qui propose toute une série d’assertions (ce qu’ils appellent des matchers), telles que  .toEqual()  ,  .toContain()  ou  .toHaveBeenCalled()  , pour n’en citer que trois.
 
-Pour connaître toutes les assertions disponibles : 
-https://jestjs.io/docs/en/expect.html#content
-
 Jest: Permet de tester des fonctions standards
 
 Enzyme: Permet de tester le rendu des composants react
+
+Pour connaître toutes les assertions disponibles : 
+https://jestjs.io/docs/en/expect.html#content
+
+### Assertions jest
+
+**expect(value)**
+
+La fonction expect est utilisée chaque fois que vous souhaitez tester une valeur. Au lieu de cela, vous utiliserez expect avec une fonction "matcher" pour affirmer quelque chose à propos d'une valeur.
+
+```Javascript
+  test('the best flavor is grapefruit', () => {
+    expect(bestLaCroixFlavor()).toBe('grapefruit');
+  });
+```
+
+**expect.extend(matchers)**
+
+Vous pouvez utiliser expect.extend pour ajouter vos propres matchers à Jest.
+
+**expect.anything()**
+
+expect.anything () match à tout sauf à null ou indéfini. Vous pouvez l'utiliser dans toEqual ou toBeCalledWith au lieu d'une valeur littérale. Par exemple, si vous voulez vérifier qu'une fonction fictive est appelée avec un argument non nul:
+
+```Javascript
+  test('map calls its argument with a non-null argument', () => {
+  const mock = jest.fn();
+  [1].map(x => mock(x));
+  expect(mock).toBeCalledWith(expect.anything());
+});
+```
+
+**expect.any(constructor)**
+
+expect.any (constructeur) match avec tout ce qui a été créé avec le constructeur donné. Vous pouvez l'utiliser dans toEqual ou toBeCalledWith au lieu d'une valeur littérale. Par exemple, si vous voulez vérifier qu'une fonction fictive est appelée avec un numéro:
+
+```Javascript
+function randocall(fn) {
+  return fn(Math.floor(Math.random() * 6 + 1));
+}
+
+test('randocall calls its callback with a number', () => {
+  const mock = jest.fn();
+  randocall(mock);
+  expect(mock).toBeCalledWith(expect.any(Number));
+});
+```
+
+**expect.arrayContaining(array)**
+
+expect.arrayContaining (array) match si le tableau reçu contient tous les éléments du tableau attendu. C'est-à-dire que le tableau attendu est un sous-ensemble du tableau reçu.
+
+```Javascript
+  describe('arrayContaining', () => {
+    const expected = ['Alice', 'Bob'];
+    it('matches even if received contains additional elements', () => {
+      expect(['Alice', 'Bob', 'Eve']).toEqual(expect.arrayContaining(expected));
+    });
+    it('does not match if received does not contain expected elements', () => {
+      expect(['Bob', 'Eve']).not.toEqual(expect.arrayContaining(expected));
+    });
+  });
+```
+**expect.assertions(number)**
+
+expect.assertions (number) vérifie qu'un certain nombre d'assertions sont appelées au cours d'un test. Cela est souvent utile lors du test de code asynchrone, afin de s'assurer que les assertions contenues dans un rappel sont effectivement appelées.
+
+**expect.hasAssertions()**
+
+expect.hasAssertions () vérifie qu'au moins une assertion est appelée lors d'un test.
+
+**expect.not.arrayContainig(array)**
+
+expect.not.arrayContaining (array) match si le tableau reçu ne contient pas tous les éléments du tableau attendu. C'est-à-dire que le tableau attendu n'est pas un sous-ensemble du tableau reçu.
+
+C'est l'inverse de expect.arrayContaining.
+
+**expect.not.objectContaining(object)**
+
+expect.not.objectContaining (object) match si tout l'objet reçu qui ne correspond pas de manière récursive aux propriétés attendues. En d'autres termes, l'objet attendu n'est pas un sous-ensemble de l'objet reçu. 
+
+C'est l'inverse de expect.objectContaining.
+
+**expect.not.stringContaining(string)**
+
+expect.not.stringContaining (string) match si la chaîne reçue ne contient pas la chaîne exacte attendue.
+
+C'est l'inverse de expect.stringContaining.
+
+**expect.not.stringMatching(string | regexp)**
+
+expect.not.stringMatching (string | regexp) match la chaîne reçue si elle ne correspond pas à l'expression rationnelle attendue.
+
+**expect.objectContaining(object)**
+
+expect.not.objectContaining (object) match si tout l'objet reçu correspond de manière récursive aux propriétés attendues. En d'autres termes, l'objet attendu est un sous-ensemble de l'objet reçu. 
+
+**expect.stringContaining(string)**
+
+expect.stringContaining (string) match si la chaîne reçue contient la chaîne exacte attendue.
+
+**expect.stringMatching(string | regexp)**
+
+expect.stringMatching (string | regexp) match si la chaîne reçue correspond à l'expression rationnelle attendue.
 
 ### SHALLOW RENDERING
   
