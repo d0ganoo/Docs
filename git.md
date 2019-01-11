@@ -161,11 +161,11 @@ Le rebase interactif permet de retravailler son historique avant de merge<br>
 
 <code>git rebase -i [code commit]</code><br>
 
-pick => utiliser le commit<br>
-reword => renommer un commit<br>
-squash => permet de fusionner le commit avec le commit précédent <br>
-fixup => peremt de fusionner le commit avec le commit précédent mais supprime le log message<br>
-drop => supprime un commit<br>
+<code>pick</code> => utiliser le commit<br>
+<code>reword</code> => renommer un commit<br>
+<code>squash</code> => permet de fusionner le commit avec le commit précédent <br>
+<code>fixup</code> => peremt de fusionner le commit avec le commit précédent mais supprime le log message<br>
+<code>drop</code> => supprime un commit<br>
 
 <code>git rebase --abort</code><br>
 Permet de quitter le mode rebase 
