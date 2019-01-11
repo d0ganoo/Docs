@@ -153,3 +153,24 @@ Upload tous les commits
 
 <code>git pull</code><br>
 Télécharge tous les commits
+
+Rebase interactif
+---
+
+Le rebase interactif permet de retravailler son historique avant de merge<br>
+
+<code>git rebase -i [code commit]</code>
+
+pick => utiliser le commit
+reword => renommer un commit
+squash => permet de fusionner le commit avec le commit précédent 
+fixup => peremt de fusionner le commit avec le commit précédent mais supprime le log message
+drop => supprime un commit
+
+<code>git rebase --abort</code><br>
+Permet de quitter le mode rebase 
+
+
+
+
+
