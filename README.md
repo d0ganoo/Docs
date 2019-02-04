@@ -12,3 +12,17 @@ Mockable.io => Permet de créer une petite APi rapidement
 Netlify => Solution d'herbergement pour déployer rapidement son site web. (Support ReactJS,VueJS,Docker) Connecte ton github.
 
 Lodash => Lib JS très pratique avec une grosse quantité de fonctions utiles
+
+Multiple.js => Permet de partager un background entre plusieurs div avec css différent
+
+fullPage.js => Pour des sites statiques fullpage
+
+CHART.JS => Pour créer des graph de données
+
+BIDEO.JS => background video full screen
+
+https://michalsnik.github.io/aos/ => Affichage déclenché au scroll 
+
+cleave.js => Permet de gérer facilement le format attendu dans un input // Compatible ReactJS
+
+granim.js => Permet de créer des backkground color dégradés facilement
