@@ -6,3 +6,9 @@
 
 ## Outils/libs pratiques:
 ---
+
+Mockable.io => Permet de créer une petite APi rapidement
+
+Netlify => Solution d'herbergement pour déployer rapidement son site web. (Support ReactJS,VueJS,Docker) Connecte ton github.
+
+Lodash => Lib JS très pratique avec une grosse quantité de fonctions utiles
