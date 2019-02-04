@@ -7,11 +7,20 @@
 ## Outils/libs pratiques:
 ---
 
+### Outils 
+
 __Mockable.io__ => Permet de créer une petite APi rapidement
 
 __Netlify__ => Solution d'herbergement pour déployer rapidement son site web. (Support ReactJS,VueJS,Docker) Connecte ton github.
 
-__Lodash__ => Lib JS très pratique avec une grosse quantité de fonctions utiles
+
+### LIBS
+
+__underscore__ < __Lodash__ => Lib JS très pratique avec une grosse quantité de fonctions utiles
+
+__Voca__ => Lib JS très pratique avec une grosse quantité de fonctions utiles
+
+__http://taffydb.com/__ => fonctionnalité de base de données , transforme object en BDD
 
 __Multiple.js__ => Permet de partager un background entre plusieurs div avec css différent
 
@@ -28,3 +37,5 @@ __cleave.js__ => Permet de gérer facilement le format attendu dans un input // 
 __granim.js__ => Permet de créer des backkground color dégradés facilement
 
 __Popper.js > Tooltip.js__ => Permet de créer des infobulles facilement // Compatible ReactJS
+
+__slick.js__ => Permet de créer des carrousels 
