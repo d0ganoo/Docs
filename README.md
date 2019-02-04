@@ -39,3 +39,5 @@ __granim.js__ => Permet de créer des backkground color dégradés facilement
 __Popper.js > Tooltip.js__ => Permet de créer des infobulles facilement // Compatible ReactJS
 
 __slick.js__ => Permet de créer des carrousels 
+
+__http://chancejs.com/__ => Permet de générer automatiquement des séries de chiffres aléatoire pour des formats définis (tel, guid, etc..)
