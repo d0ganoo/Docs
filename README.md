@@ -7,22 +7,24 @@
 ## Outils/libs pratiques:
 ---
 
-Mockable.io => Permet de créer une petite APi rapidement
+__Mockable.io__ => Permet de créer une petite APi rapidement
 
-Netlify => Solution d'herbergement pour déployer rapidement son site web. (Support ReactJS,VueJS,Docker) Connecte ton github.
+__Netlify__ => Solution d'herbergement pour déployer rapidement son site web. (Support ReactJS,VueJS,Docker) Connecte ton github.
 
-Lodash => Lib JS très pratique avec une grosse quantité de fonctions utiles
+__Lodash__ => Lib JS très pratique avec une grosse quantité de fonctions utiles
 
-Multiple.js => Permet de partager un background entre plusieurs div avec css différent
+__Multiple.js__ => Permet de partager un background entre plusieurs div avec css différent
 
-fullPage.js => Pour des sites statiques fullpage
+__fullPage.js__ => Pour des sites statiques fullpage
 
-CHART.JS => Pour créer des graph de données
+__CHART.JS__ => Pour créer des graph de données
 
-BIDEO.JS => background video full screen
+__BIDEO.JS__ => background video full screen
 
-https://michalsnik.github.io/aos/ => Affichage déclenché au scroll 
+__https://michalsnik.github.io/aos/__ => Affichage déclenché au scroll 
 
-cleave.js => Permet de gérer facilement le format attendu dans un input // Compatible ReactJS
+__cleave.js__ => Permet de gérer facilement le format attendu dans un input // Compatible ReactJS
 
-granim.js => Permet de créer des backkground color dégradés facilement
+__granim.js__ => Permet de créer des backkground color dégradés facilement
+
+__Popper.js > Tooltip.js__ => Permet de créer des infobulles facilement // Compatible ReactJS
