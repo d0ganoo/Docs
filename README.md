@@ -7,6 +7,14 @@
 ## Outils/libs pratiques:
 ---
 
+### Pluggin chrome
+
+__LightHouse__ => Analyse les sites webs => plan d'action pour de meilleurs performances
+
+__react developper tools__ => outils de débug pour react
+
+__redux developper tools__ => outils de debug pour redux
+
 ### Outils 
 
 __Mockable.io__ => Permet de créer une petite APi rapidement
