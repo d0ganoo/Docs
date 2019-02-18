@@ -18,6 +18,8 @@ __Netlify__ => Solution d'herbergement pour déployer rapidement son site web. (
 
 __underscore__ < __Lodash__ => Lib JS très pratique avec une grosse quantité de fonctions utiles
 
+__moment.js__ | __date-fns__ | __Luxon__ => Lib js pour la gestion des dates
+
 __Voca__ => Lib JS très pratique avec une grosse quantité de fonctions utiles
 
 __http://taffydb.com/__ => fonctionnalité de base de données , transforme object en BDD
