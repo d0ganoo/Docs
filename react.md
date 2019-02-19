@@ -310,6 +310,11 @@ function HOC(WrappedComponent) {
 }
 ```
 
+Les hooks
+---
+
+https://www.masterreact.io/articles/2019-02-13-premiers-pas-avec-les-hooks/
+
 Cycle de vie
 ---
 
