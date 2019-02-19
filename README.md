@@ -24,6 +24,8 @@ __Netlify__ => Solution d'herbergement pour déployer rapidement son site web. (
 
 ### LIBS
 
+__Eslint__ et __Prettier__ => Améliration du code : https://www.masterreact.io/articles/2018-10-22-ameliorer-code-eslint-prettier/
+
 __underscore__ < __Lodash__ => Lib JS très pratique avec une grosse quantité de fonctions utiles
 
 __moment.js__ | __date-fns__ | __Luxon__ => Lib js pour la gestion des dates
