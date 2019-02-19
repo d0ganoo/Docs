@@ -6,4 +6,4 @@
 ## FAQ:
 ---
 
-Différences entre HOX et hooks ?
+__Différences entre HOX et hooks ?__
