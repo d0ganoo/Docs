@@ -26,18 +26,24 @@ mobx.autorun(function(){
 });
 
 global.tchat = tchat;
-tchat.messages.push('Mon nouveau message');
+tchat.messages.push('Mon nouveau message'); // Mutation à l'arrache / déconseillé
 
 ```
 
 Syntaxe différente mais un code qui fait exactement la même chose:
 
 ```Javascript
-import mobx, {observable} from 'mobx';
+import mobx, {observable, action} from 'mobx';
+
+mobx.useStrict(true); // Empêche les mutation à l'arache (oblige l'utilisation des actions)
 
 class Tchat{
   @observable messages = [];
   @observabble notifications = 0;
+  
+  @action addMessage(message){
+    this.messages.push(message);
+  }
 }
 
 let tchat = new Tchat();
@@ -46,10 +52,10 @@ mobx.autorun(function(){
 });
 
 global.tchat = tchat;
-tchat.messages.push('Mon nouveau message');
+tchat.addMessage('Mon nouveau message');
 
 ```
 
-Dans cet exemple, on voit que mobx observe le tableau de message par le biais de __extenObservable__ et detecte un changement grâce à __autorun__ : c'est la magie de mobx.
+Dans cet exemple, on voit que mobx observe le tableau de message par le biais de __extenObservable__ et detecte un changement grâce à __autorun__  ou observe (fonction qui permet d'observer les variables de l'object du constructeur de la classe): c'est la magie de mobx.
 
 autorun est intelligent, il se déclenche seulement sur la modifié et pas sur tout l'objet (state) de extendObservable.
