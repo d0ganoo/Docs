@@ -14,7 +14,8 @@ import mobx from 'mobx';
 class Tchat{
   constructor(){
     mobx.extendObservable(this, {
-      messages:[]
+      messages:[],
+      notifications:0;
     });
   }
 }
@@ -28,6 +29,27 @@ global.tchat = tchat;
 tchat.messages.push('Mon nouveau message');
 
 ```
+
+Syntaxe différente mais un code qui fait exactement la même chose:
+
+```Javascript
+import mobx, {observable} from 'mobx';
+
+class Tchat{
+  @observable messages = [];
+  @observabble notifications = 0;
+}
+
+let tchat = new Tchat();
+mobx.autorun(function(){
+  console.log('Voici la liste des messages : ', tchat.messages.join(', '));
+});
+
+global.tchat = tchat;
+tchat.messages.push('Mon nouveau message');
+
+```
+
 Dans cet exemple, on voit que mobx observe le tableau de message par le biais de __extenObservable__ et detecte un changement grâce à __autorun__ : c'est la magie de mobx.
 
 autorun est intelligent, il se déclenche seulement sur la modifié et pas sur tout l'objet (state) de extendObservable.
