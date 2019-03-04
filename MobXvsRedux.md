@@ -6,6 +6,8 @@
 
 # MobX vs Redux
 
+Source : https://www.youtube.com/watch?v=khYesU0jTtI  __Grafikart__
+
 Mobx est basé sur la notion d'écouteur/observeur de class.
 
 ```Javascript
