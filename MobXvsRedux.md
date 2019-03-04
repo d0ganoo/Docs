@@ -58,4 +58,16 @@ tchat.addMessage('Mon nouveau message');
 
 Dans cet exemple, on voit que mobx observe le tableau de message par le biais de __extenObservable__ et detecte un changement grâce à __autorun__  ou observe (fonction qui permet d'observer les variables de l'object du constructeur de la classe): c'est la magie de mobx.
 
-autorun est intelligent, il se déclenche seulement sur la modifié et pas sur tout l'objet (state) de extendObservable.
+autorun est intelligent, il se déclenche seulement sur la propriété modifiée et non pas sur tout l'objet (state) de extendObservable.
+
+Conclusion:
+
+Ce sont 2 générateurs de state avec une appoche différente du problème:
+
+Mobx: l'approche est la moins contraingnate au niveau du fonctionnement. (La state peut garder la structure objet classique + greffe du système d'observable pour détecter les modifications mais magie noir mobx :p) Facile à utiliser avec react et angular Js (Avec vue, vaut mieux utiliser VueX)
+
+Redux: Approche inspriré de la programmation fonctionnel. + testable avec moins d'effet de bord. Pas de mutation de la state. 
+Problème concernant l'architecture de la state: Obligation de normaliser la state. Ne pas avoir d'objet trop imbriqué
+
+
+
