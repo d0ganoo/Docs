@@ -7,6 +7,10 @@
 ## Outils/libs pratiques:
 ---
 
+### Code caratères spéciaux 
+
+https://css-tricks.com/snippets/html/glyphs/
+
 ### Pluggin chrome
 
 __LightHouse__ => Analyse les sites webs => plan d'action pour de meilleurs performances
