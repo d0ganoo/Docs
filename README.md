@@ -57,3 +57,5 @@ __Popper.js > Tooltip.js__ => Permet de créer des infobulles facilement // Comp
 __slick.js__ => Permet de créer des carrousels 
 
 __http://chancejs.com/__ => Permet de générer automatiquement des séries de chiffres aléatoire pour des formats définis (tel, guid, etc..)
+
+__https://github.com/gpujs/gpu.js#table-of-contents__ => Permet d'excuter du js sur le GPU pour gagner en perf
