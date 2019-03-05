@@ -19,6 +19,8 @@ __react developper tools__ => outils de débug pour react
 
 __redux developper tools__ => outils de debug pour redux
 
+__https://getsmartshot.com/__ => Pluggin chrome pour faire des screenshots rapide
+
 ## Outils 
 
 __Mockable.io__ => Permet de créer une petite APi rapidement
@@ -75,4 +77,4 @@ __https://www.blogdumoderateur.com/imageric-moteur-recherche-photos-videos-libre
 
 __http://www.stickpng.com/cat/bots-and-robots?page=2__ => Photos libres de droit
 
-__https://getsmartshot.com/__ => Pluggin chrome pour faire des screenshots rapide
+
