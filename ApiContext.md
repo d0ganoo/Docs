@@ -93,3 +93,23 @@ render(
   document.getElementById("root"),
 );
 ```
+
+```Javascript
+// Hello.js
+import React from "react";
+/**
+ * On importe cette fois non pas le UserProvider,
+ * mais le contexte afin d'accéder au `Consumer`
+ */
+import { UserContext } from "./store/UserProvider";
+
+/**
+ * Le Consumer expose le contenu de la propriété `value`
+ * du Provider
+ */
+export default () => (
+  <UserContext.Consumer>
+    {value => <h1>Hello {value.name}!</h1>}
+  </UserContext.Consumer>
+);
+```
