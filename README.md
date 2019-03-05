@@ -77,4 +77,5 @@ __https://www.blogdumoderateur.com/imageric-moteur-recherche-photos-videos-libre
 
 __http://www.stickpng.com/cat/bots-and-robots?page=2__ => Photos libres de droit
 
+__https://compressor.io/__ => Compresser des images en ligne facilement
 
