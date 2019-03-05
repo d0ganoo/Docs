@@ -4,14 +4,14 @@
 
 * * * 
 
-## Outils/libs pratiques:
----
+# Outils/libs pratiques:
+--
 
-### Code caratères spéciaux 
+## Code caratères spéciaux 
 
 https://css-tricks.com/snippets/html/glyphs/
 
-### Pluggin chrome
+## Pluggin chrome
 
 __LightHouse__ => Analyse les sites webs => plan d'action pour de meilleurs performances
 
@@ -19,14 +19,13 @@ __react developper tools__ => outils de débug pour react
 
 __redux developper tools__ => outils de debug pour redux
 
-### Outils 
+## Outils 
 
 __Mockable.io__ => Permet de créer une petite APi rapidement
 
 __Netlify__ => Solution d'herbergement pour déployer rapidement son site web. (Support ReactJS,VueJS,Docker) Connecte ton github.
 
-
-### LIBS
+## LIBS
 
 __Eslint__ et __Prettier__ => Améliration du code : https://www.masterreact.io/articles/2018-10-22-ameliorer-code-eslint-prettier/
 
@@ -59,3 +58,7 @@ __slick.js__ => Permet de créer des carrousels
 __http://chancejs.com/__ => Permet de générer automatiquement des séries de chiffres aléatoire pour des formats définis (tel, guid, etc..)
 
 __https://github.com/gpujs/gpu.js#table-of-contents__ => Permet d'excuter du js sur le GPU pour gagner en perf
+
+## Outils divers
+
+__FlexClip__ => Editeur de vidéo en ligne pratique et gratuit https://www.flexclip.com/
