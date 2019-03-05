@@ -64,3 +64,7 @@ __https://github.com/gpujs/gpu.js#table-of-contents__ => Permet d'excuter du js 
 __FlexClip__ => Editeur de vidéo en ligne pratique et gratuit https://www.flexclip.com/
 
 __https://www.remove.bg/__ => Permet de retirer le background d'une image en 3 sec sans effort.
+
+__https://29a.ch/photo-forensics/#forensic-magnifier__ => Permet d'analyser une image (vérifier les fake)
+
+__Squoosh__ => Outil de Google pour optimiser les images
