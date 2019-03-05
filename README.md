@@ -69,4 +69,10 @@ __https://29a.ch/photo-forensics/#forensic-magnifier__ => Permet d'analyser une 
 
 __Squoosh__ => Outil de Google pour optimiser les images
 
+__https://demos.algorithmia.com/colorize-photos/__ => Permet de coloriser 
+
 __https://www.blogdumoderateur.com/imageric-moteur-recherche-photos-videos-libres-droit/__ => Photos libres de droit
+
+__http://www.stickpng.com/cat/bots-and-robots?page=2__ => Photos libres de droit
+
+__https://getsmartshot.com/__ => Pluggin chrome pour faire des screenshots rapide
