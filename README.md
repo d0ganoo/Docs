@@ -65,6 +65,10 @@ __https://github.hubspot.com/vex/docs/welcome/__ => Permet de superposer des mod
 
 __http://lab.jakiestfu.com/contextjs/__ => Permet d'utliser le clic droit et de faire des menus contextuels
 
+__Planetary.js__ => Pour créer rapidement des modèles 3D de globes terrestres interactifs.
+
+__Magnifier.js__ => Permet de créer un zoom sur une image.
+
 ## Outils divers
 
 __FlexClip__ => Editeur de vidéo en ligne pratique et gratuit https://www.flexclip.com/
