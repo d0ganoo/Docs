@@ -68,3 +68,5 @@ __https://www.remove.bg/__ => Permet de retirer le background d'une image en 3 s
 __https://29a.ch/photo-forensics/#forensic-magnifier__ => Permet d'analyser une image (vérifier les fake)
 
 __Squoosh__ => Outil de Google pour optimiser les images
+
+__https://www.blogdumoderateur.com/imageric-moteur-recherche-photos-videos-libres-droit/__ => Photos libres de droit
