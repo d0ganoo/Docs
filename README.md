@@ -62,3 +62,5 @@ __https://github.com/gpujs/gpu.js#table-of-contents__ => Permet d'excuter du js 
 ## Outils divers
 
 __FlexClip__ => Editeur de vidéo en ligne pratique et gratuit https://www.flexclip.com/
+
+__https://www.remove.bg/__ => Permet de retirer le background d'une image en 3 sec sans effort.
