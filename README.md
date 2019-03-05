@@ -61,6 +61,10 @@ __http://chancejs.com/__ => Permet de générer automatiquement des séries de c
 
 __https://github.com/gpujs/gpu.js#table-of-contents__ => Permet d'excuter du js sur le GPU pour gagner en perf
 
+__https://github.hubspot.com/vex/docs/welcome/__ => Permet de superposer des modals (Effets de diaporama par slide)
+
+__http://lab.jakiestfu.com/contextjs/__ => Permet d'utliser le clic droit et de faire des menus contextuels
+
 ## Outils divers
 
 __FlexClip__ => Editeur de vidéo en ligne pratique et gratuit https://www.flexclip.com/
@@ -78,4 +82,6 @@ __https://www.blogdumoderateur.com/imageric-moteur-recherche-photos-videos-libre
 __http://www.stickpng.com/cat/bots-and-robots?page=2__ => Photos libres de droit
 
 __https://compressor.io/__ => Compresser des images en ligne facilement
+
+
 
