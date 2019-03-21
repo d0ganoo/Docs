@@ -35,7 +35,7 @@ __gatsby__ => Framework open source pour créer des sites rapidement (basé sur 
 
 ## LIBS
 
-__Jekyll , Pelican or hugo => 3 outils pour générer des sites statics
+__Jekyll , Pelican or hugo__ => 3 outils pour générer des sites statics
 
 __Eslint__ et __Prettier__ => Améliration du code : https://www.masterreact.io/articles/2018-10-22-ameliorer-code-eslint-prettier/
 
