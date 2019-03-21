@@ -21,13 +21,21 @@ __redux developper tools__ => outils de debug pour redux
 
 __https://getsmartshot.com/__ => Pluggin chrome pour faire des screenshots rapide
 
+__visBug__ => Outils pour modifier la page directement, très utile pour vérifier l'alignement
+
 ## Outils 
 
 __Mockable.io__ => Permet de créer une petite APi rapidement
 
 __Netlify__ => Solution d'herbergement pour déployer rapidement son site web. (Support ReactJS,VueJS,Docker) Connecte ton github.
 
+__github-page__ => Hébergement direct depuis github
+
+__gatsby__ => Framework open source pour créer des sites rapidement (basé sur react)
+
 ## LIBS
+
+__Jekyll , Pelican or hugo => 3 outils pour générer des sites statics
 
 __Eslint__ et __Prettier__ => Améliration du code : https://www.masterreact.io/articles/2018-10-22-ameliorer-code-eslint-prettier/
 
