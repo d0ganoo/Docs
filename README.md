@@ -77,7 +77,7 @@ __Planetary.js__ => Pour créer rapidement des modèles 3D de globes terrestres 
 
 __Magnifier.js__ => Permet de créer un zoom sur une image.
 
-## New ## __https://www.react-spring.io/__ => lib pour faire des animation sympa en react
+{ New } __https://www.react-spring.io/__ => lib pour faire des animation sympa en react
 
 ## Outils divers
 
