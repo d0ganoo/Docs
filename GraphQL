@@ -13,7 +13,7 @@ GraphQL:
   
   Ex:
  
-```Javascript
+```javascript
  
   const graphQL = requi("graphQL");
   const {
