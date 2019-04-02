@@ -13,8 +13,7 @@ GraphQL:
   
   Ex:
  
-```
- 
+```Javascript
   const graphQL = requi("graphQL");
   const {
     GraphQLObjectType,
@@ -29,6 +28,5 @@ GraphQL:
       firstname: {type: GraphQLString},
       age: {GraphQLInt}
     }
-  })
-  
- ```
+    })
+```
