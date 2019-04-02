@@ -12,9 +12,9 @@ GraphQL:
   Fonctionne avec express.
   
   Ex:
-  
-  ```Javascript
-  
+ 
+ ```Javascript
+ 
   const graphQL = requi("graphQL");
   const {
     GraphQLObjectType,
@@ -31,4 +31,4 @@ GraphQL:
     }
   })
   
-  ```
+```
