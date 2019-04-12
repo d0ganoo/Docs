@@ -33,6 +33,8 @@ __github-page__ => Hébergement direct depuis github
 
 __gatsby__ => Framework open source pour créer des sites rapidement (basé sur react)
 
+{New} __https://gitpod.io/__ => outils pour travailler sur des depots github depuis le navigateur
+
 ## LIBS
 
 __Jekyll , Pelican or hugo__ => 3 outils pour générer des sites statics
