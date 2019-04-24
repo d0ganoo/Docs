@@ -33,6 +33,8 @@ __github-page__ => Hébergement direct depuis github
 
 __gatsby__ => Framework open source pour créer des sites rapidement (basé sur react)
 
+{New} __docusaurus__ => permet de créer des docs facilement à partir de fichier markdown
+
 {New} __https://gitpod.io/__ => outils pour travailler sur des depots github depuis le navigateur
 
 ## LIBS
