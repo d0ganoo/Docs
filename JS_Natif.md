@@ -5,6 +5,12 @@
 
 # JS natif
 
+ES6 = ES2015
+ES7 = ES2016
+ES8 = ES2017
+ES9 = ES2018
+ES10 = ES2019
+
 ## Variables et leur portée  
 * <b>globale</b>: Déclare une variable accessible partout
 * <b>var</b>: Déclare une variable dans le contexte de l'exécution (scope de la fonction par exemple)
