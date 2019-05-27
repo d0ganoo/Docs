@@ -37,6 +37,12 @@ __gatsby__ => Framework open source pour créer des sites rapidement (basé sur 
 
 {New} __https://gitpod.io/__ => outils pour travailler sur des depots github depuis le navigateur
 
+{New} __docker__ => Docker est un logiciel libre permettant facilement de lancer des applications dans des conteneurs logiciels
+
+{New} __kubernetes__ => système open source qui vise à fournir une « plate-forme permettant d'automatiser le déploiement, la montée en charge et la mise en œuvre de conteneurs d'application sur des clusters de serveurs 
+
+{New} __buddy.works__ => Outil CI/CD
+
 ## LIBS
 
 __Jekyll , Pelican or hugo__ => 3 outils pour générer des sites statics
@@ -82,6 +88,8 @@ __Planetary.js__ => Pour créer rapidement des modèles 3D de globes terrestres 
 __Magnifier.js__ => Permet de créer un zoom sur une image.
 
 { New } __https://www.react-spring.io/__ => lib pour faire des animation sympa en react
+
+{ New } __https://www.pixijs.com/__ => Permet de créer du contenu avec le moteur de rendu WebGL 2D
 
 ## Outils divers
 
