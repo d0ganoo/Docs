@@ -81,6 +81,11 @@ x et y affiche Carlos // On a changé la propriété name de l'object
 Un contexte d'exécution est crée lorsqu'une fonction est exécutée.
 Le code qui n'est pas dans une fonction appartient au contexte d'exécution global. (En js => window)
 
+Un contexte d'exécution est composé de 3 éléments:
+
+1- L'objet des variables // toutes les variables et fonctions définies dans ce context
+2- La chaine des scopes // toutes les variables dont notre context aura connaissance et donc pourra y accéder
+3- Le this // Objet associé au context
 
 
 
