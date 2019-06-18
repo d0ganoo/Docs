@@ -24,6 +24,8 @@ Ce code ne fonctionne pas
 
 # Hosting de variables
 
+Le hosting fonctionne que avec le var!! (ne marche pas avec le let et le const)
+
 Le hosting de variable hisse la déclaration de variable mais pas l'assignation.
 ```Javascript
 console.log(x);
