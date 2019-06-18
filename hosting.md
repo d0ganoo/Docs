@@ -76,6 +76,12 @@ y [452]
 
 x et y affiche Carlos // On a changé la propriété name de l'object
 
+# Contexte d'exécution
+
+Un contexte d'exécution est crée lorsqu'une fonction est exécutée.
+Le code qui n'est pas dans une fonction appartient au contexte d'exécution global. (En js => window)
+
+
 
 
 
