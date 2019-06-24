@@ -2,6 +2,9 @@
 
 # Webpack
 
+ Qualifié de “bundler”, il vous permettra de faire bien des choses : utiliser un serveur local, utiliser le Live Reload, mais aussi et surtout compiler tous vos fichiers pour les regrouper en un seul.
+
+
 ## Live reload vs hot reload
 
 #### Live reload
