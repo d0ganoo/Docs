@@ -1,7 +1,7 @@
 
-## Glossaire
+# Glossaire
 
-# namespace
+## namespace
 
 Les namespaces représentent un moyen d'encapsuler des éléments. Cela peut être conçu comme un concept abstrait, pour plusieurs raisons. 
 Par exemple, dans un système de fichiers, les dossiers représentent un groupe de fichiers associés et servent d'espace de noms pour les fichiers qu'ils contiennent.
