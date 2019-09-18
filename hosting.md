@@ -53,7 +53,7 @@ y [ref a]
 
 Les Objects fonctionne par référence et non pas par valeur !!!!
 ```Javascript
-var x = {namme: 'FF'};
+var x = {name: 'FF'};
 console.log(x)
 ```
 En mémoire:
@@ -62,7 +62,7 @@ x [pointe vers l'object => 452]adresse:468             [name:'FF']adresse:452
 
 Exemple:
 ```Javascript
-var x = {namme: 'FF'};
+var x = {name: 'FF'};
 var y = x;
 y.name = 'Carlos';
 console.log(x);
