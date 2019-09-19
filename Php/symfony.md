@@ -18,7 +18,12 @@ Un exemple concret est que le fichier foo.txt peut exister dans les deux dossier
 ## Visibilité des variables
 
 ```php
-public $public = 'Public'; // Disponible partout
-protected $protected = 'Protected'; // Disponibilité limité à la classe elle-même, ainsi qu'aux classes qui en héritent et parente
-private $private = 'Private'; // Disponible uniquement dans la class qui les a définis
+public $public = 'Public'; 
+// Disponible partout
+
+protected $protected = 'Protected'; 
+// Disponibilité limité à la classe elle-même, ainsi qu'aux classes qui en héritent et parente
+
+private $private = 'Private'; 
+// Disponible uniquement dans la class qui les a définis
 ```
