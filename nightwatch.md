@@ -20,7 +20,7 @@ Créer un fichier nightwatch.json à la racine du projet et copier la configurat
 
 ```Javascript
 {
-  "src_folders" : ["./examples/tests", "./examples/mocha", "./examples/unittests"],
+  "src_folders" : ["./examples/tests", "./examples/mocha", "./examples/unittests"], // Dossier cible pour écrire les tests
   "custom_commands_path" : "./examples/custom-commands",
   "custom_assertions_path" : "./examples/custom-assertions",
   "page_objects_path" : "./examples/pages",
@@ -67,8 +67,8 @@ Créer un fichier nightwatch.json à la racine du projet et copier la configurat
         "host": "localhost",
         "server_path": "./bin/selenium-server-standalone-3.10.0.jar",
         "cli_args": {
-          "webdriver.gecko.driver": "./bin/geckodriver-0.23",
-          "webdriver.chrome.driver": "./bin/chromedriver-2.32"
+          "webdriver.gecko.driver": "./bin/geckodriver-0.23", // Firefox 
+          "webdriver.chrome.driver": "./bin/chromedriver-2.32" // Chrome
         }
       },
 
@@ -80,8 +80,10 @@ Créer un fichier nightwatch.json à la racine du projet et copier la configurat
   }
 }
 ```
+Télécharger selenium-server-standalone-3.10.0.jar => selenium => server_path
+Télécharger les drivers (./bin/geckodriver-0.23, ./bin/chromedriver-2.32) qui vont servir à piloter les différents navigateurs.
 
-
+Possibilité de faire des screenshots en cas d'échec d'un test.
 
 #### Pour lancer nightwatch: lancer l'éxecutable
 
