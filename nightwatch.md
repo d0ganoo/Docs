@@ -80,14 +80,35 @@ Créer un fichier nightwatch.json à la racine du projet et copier la configurat
   }
 }
 ```
+Les fichiers de test garde l'extension .js || faire une configuration spéciale pour gérer une autre extension.
 
 - Télécharger selenium-server-standalone-3.10.0.jar => selenium => server_path
 - Télécharger les drivers (./bin/geckodriver-0.23, ./bin/chromedriver-2.32) qui vont servir à piloter les différents navigateurs.
 
-Possibilité de faire des screenshots en cas d'échec d'un test.
+- Possibilité de faire des screenshots en cas d'échec d'un test.
 
 #### Pour lancer nightwatch: lancer l'éxecutable
 
 ```Javascript
 /node_modules/.bin/nightwatch
 ```
+
+### Exemple de test avec nightwatch
+
+```Javascript
+module.exports = {
+    'Datepicker' : function (brower){
+      brower
+        .url('https://www.mydatepicker.com/index.html')
+        .waitForElementVisible('body',1000)
+        .click('.datepicker__container input:first-child')
+        .waitForElement('.datepicker', 1000)
+        .useXpath() // A partir de maintenant, tous les sélecteurs seront en Xpath
+        .useCss() // Tous les sélecteurs sont de nouveau en css. PAR DEFAUT, ILS SONT EN CSS
+        .click('')
+        .end();
+    }
+}
+```
+- La liste des assertions: https://nightwatchjs.org/api 
+
