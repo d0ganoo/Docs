@@ -80,8 +80,9 @@ Créer un fichier nightwatch.json à la racine du projet et copier la configurat
   }
 }
 ```
-Télécharger selenium-server-standalone-3.10.0.jar => selenium => server_path
-Télécharger les drivers (./bin/geckodriver-0.23, ./bin/chromedriver-2.32) qui vont servir à piloter les différents navigateurs.
+
+- Télécharger selenium-server-standalone-3.10.0.jar => selenium => server_path
+- Télécharger les drivers (./bin/geckodriver-0.23, ./bin/chromedriver-2.32) qui vont servir à piloter les différents navigateurs.
 
 Possibilité de faire des screenshots en cas d'échec d'un test.
 
