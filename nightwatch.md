@@ -97,16 +97,23 @@ Les fichiers de test garde l'extension .js || faire une configuration spéciale 
 
 ```Javascript
 module.exports = {
-    'Datepicker' : function (brower){
-      brower
+    'Datepicker' : function (browser){
+      browser
         .url('https://www.mydatepicker.com/index.html')
         .waitForElementVisible('body',1000)
         .click('.datepicker__container input:first-child')
         .waitForElement('.datepicker', 1000)
         .useXpath() // A partir de maintenant, tous les sélecteurs seront en Xpath
         .useCss() // Tous les sélecteurs sont de nouveau en css. PAR DEFAUT, ILS SONT EN CSS
-        .click('')
+        .useXpath()
+        .click('//span[@class="datepicker__day__text" and text()="4"]'
+        .pause(1000)
+        .click('//button[text()="Ok"]')
+        .waitForElementNotPresent('.datepicker', 1000)
         .end();
+        
+        browser.useCss().expect.element('.datepicker__container input:first-child').to.have.value('04/02/2016')
+        browser.end()
     }
 }
 ```
