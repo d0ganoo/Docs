@@ -23,7 +23,7 @@ Créer un fichier nightwatch.json à la racine du projet et copier la configurat
   "src_folders" : ["./examples/tests", "./examples/mocha", "./examples/unittests"], // Dossier cible pour écrire les tests
   "custom_commands_path" : "./examples/custom-commands",
   "custom_assertions_path" : "./examples/custom-assertions",
-  "page_objects_path" : "./examples/pages",
+  "page_objects_path" : "./examples/pages", // Dossier pages => fichiers descriptifs
   "globals_path" : "./examples/globalsModule.js",
 
   "webdriver" : {
@@ -93,7 +93,7 @@ Les fichiers de test garde l'extension .js || faire une configuration spéciale 
 /node_modules/.bin/nightwatch
 ```
 
-### Exemple de test avec nightwatch
+### Exemple de test d'un datepicker avec nightwatch
 
 ```Javascript
 module.exports = {
@@ -118,4 +118,44 @@ module.exports = {
 }
 ```
 - La liste des assertions: https://nightwatchjs.org/api 
+
+### Description de la page et de ses éléments (dossier cible décrit par page_objects_path)
+
+```Javascript
+module.exports = {
+    url: 'https://www.mydatepicker.com/index.html',
+    elements:{
+      datepicker: '.datepicker',
+      dateInput: '.datepicker__container input:first-child',
+      okButton:{
+        selector:'//button[text()="OK"]',
+        locateStrategy: 'xpath'
+      },
+      dayButton: {
+        selector: '//span[@class="datepicker__day__text" and text()="4"]',
+        locateStrategy
+      }
+    }
+}
+```
+
+### Simplifions notre premier test grâce à notre nouvelle page
+
+```Javascript
+module.exports = {
+    'Datepicker' : function (browser){
+      let page = browser.page.datepicker();
+      page.navigate()
+        .waitForElementVisible('body',1000)
+        .click('@dateInput')
+        .waitForElementVisible('@datepicker', 1000)
+        .click('@dateButton')
+        .click('@okButton')
+        .waitForElementNotPresent('@datepicker', 1000)
+        
+        page.expect.element('@dateInput').to.have.value.that.equals('04/02/2016')
+        browser.end()
+    }
+}
+```
 
