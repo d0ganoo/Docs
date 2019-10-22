@@ -131,7 +131,7 @@ module.exports = {
         selector:'//button[text()="OK"]',
         locateStrategy: 'xpath'
       },
-      dayButton: {
+      dateButton: {
         selector: '//span[@class="datepicker__day__text" and text()="4"]',
         locateStrategy
       }
