@@ -26,3 +26,13 @@ Cypress fonctionne sur n’importe quel framework ou site web front-end.
 #### Enzyme
 
 Enzyme est un utilitaire de test JavaScript pour React qui facilite l'assertion, la manipulation et la traversée des résultats de vos composants React.
+
+#### Mocha
+
+Les développeurs décrivent Mocha comme " un framework de test javascript simple, flexible et amusant pour node.js et le navigateur ". Mocha est un framework de test JavaScript riche en fonctionnalités qui s'exécute sur node.js et le navigateur, ce qui rend les tests asynchrones simples et amusants. Les tests Mocha s'exécutent en série, ce qui permet de générer des rapports flexibles et précis tout en mappant les exceptions non capturées aux scénarios de test appropriés.
+
+#### Qunit
+
+QUnit est un framework de tests unitaires JavaScript. Développé à l'origine pour tester jQuery, jQuery UI et jQuery Mobile, il s'agit d'un framework générique permettant de tester n'importe quel code JavaScript. Il prend en charge les environnements côté client dans les navigateurs Web et côté serveur.
+
+
