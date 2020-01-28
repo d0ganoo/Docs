@@ -39,4 +39,12 @@ function getWeekNumber() {
        case 6: FirstBitLength=FirstDayOfYear-3;
                    break;
     }
+    let adddays=(sem-1)*7+FirstBitLength
+    let finalDate=new Date()
+    finalDate.setUTCFullYear(an,0,adddays)
+    let finalDateEnd=new Date()
+    finalDateEnd.setUTCFullYear(an,0,adddays+6)
+    
+    return (sem==0 || sem>53)?"erreur":an+" <br/>debut de semaine : "+finalDate.toLocaleString()+"<br/>fin de semaine : " +finalDateEnd.toLocaleString();
+    }
 ```
